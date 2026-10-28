@@ -3,12 +3,12 @@ import { fetchJson } from './data.js';
 import { findNearestPlace } from './nearest.js';
 
 const STYLES = {
-  state: { color: '#1f3b4d', weight: 2.5, fill: false, interactive: false },
-  county: { color: '#5b7083', weight: 0.75, fillColor: '#ffffff', fillOpacity: 0, opacity: 0.8 },
-  // Towns are outlines over the statewide zone grid; fill stays clickable at 0 opacity.
-  place: { color: '#374151', weight: 0.75, opacity: 0.7, fillColor: '#ffffff', fillOpacity: 0 },
-  placeHover: { color: '#111827', weight: 2, opacity: 1, fillOpacity: 0.25 },
-  placeSelected: { color: '#111827', weight: 3, opacity: 1, fillOpacity: 0.25 },
+  state: { color: '#1f4d36', weight: 2, fill: false, interactive: false },
+  county: { color: '#3d4a40', weight: 0.6, opacity: 0.35, fillColor: '#ffffff', fillOpacity: 0 },
+  // Towns are faint outlines over the statewide zone grid; fill stays clickable at 0 opacity.
+  place: { color: '#2f3b33', weight: 0.6, opacity: 0.4, fillColor: '#ffffff', fillOpacity: 0 },
+  placeHover: { color: '#1f4d36', weight: 2, opacity: 1, fillColor: '#fffaf0', fillOpacity: 0.35 },
+  placeSelected: { color: '#b85c38', weight: 2.5, opacity: 1, fillColor: '#fffaf0', fillOpacity: 0.35 },
 };
 
 // getZone(placeProps) -> zone string for the current window, or null (used in tooltips).

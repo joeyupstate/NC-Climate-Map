@@ -1,9 +1,22 @@
-$color-text: #1f2937;
-$color-muted: #6b7280;
-$color-border: #e5e7eb;
-$color-accent: #2e7d5b;
-$color-error: #b91c1c;
-$panel-width: 320px;
+// Garden / botanical theme: warm paper, forest green, terracotta.
+$paper: #f6f1e6;
+$panel: #fbf8f1;
+$card: #ffffff;
+$ink: #1f2a22;
+$muted: #6b6f63;
+$line: #e4dccb;
+$forest: #1f4d36;
+$moss: #557a46;
+$leaf: #7fa865;
+$terracotta: #b85c38;
+$amber: #b07d12;
+$error: #a33a2a;
+
+$font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+$font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+$panel-width: 380px;
+$radius: 12px;
 $bp-mobile: 768px;
 
 *,
@@ -19,9 +32,20 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  color: $color-text;
-  background: #f8fafc;
+  font-family: $font-body;
+  font-size: 15px;
+  line-height: 1.45;
+  color: $ink;
+  background: $paper;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-display;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .app {
@@ -37,153 +61,652 @@ body {
 .map {
   flex: 1;
   min-height: 0;
+  background: #e9e4d8;
 }
 
+// ---------------------------------------------------------------- panel
+
 .panel {
+  display: flex;
+  flex-direction: column;
   width: $panel-width;
   flex-shrink: 0;
   overflow-y: auto;
-  background: #fff;
-  border-right: 1px solid $color-border;
-  padding: 1.25rem;
+  background: $panel;
+  border-right: 1px solid $line;
+  box-shadow: 4px 0 24px rgba(31, 42, 34, 0.06);
+  z-index: 1; // shadow over the map
 
   @media (max-width: $bp-mobile) {
     width: 100%;
-    max-height: 40%;
+    max-height: 48%;
     border-right: 0;
-    border-top: 1px solid $color-border;
-    padding: 1rem;
+    border-top: 1px solid $line;
+    box-shadow: 0 -4px 24px rgba(31, 42, 34, 0.08);
   }
 
-  &__header {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $color-border;
+  &__body {
+    padding: 0 1.25rem 2rem;
+  }
+
+  &__error {
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: #fbeae6;
+    color: $error;
+  }
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.25rem 1rem;
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(127, 168, 101, 0.22), transparent 60%),
+    $forest;
+  color: #f4efe2;
+
+  &__mark {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #cfe3b9;
+
+    svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
   }
 
   &__title {
     margin: 0;
-    font-size: 1.25rem;
-    color: $color-accent;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: #fffaf0;
   }
 
-  &__subtitle {
-    margin: 0.25rem 0 0;
-    font-size: 0.875rem;
-    color: $color-muted;
+  &__tagline {
+    margin: 0.2rem 0 0;
+    font-size: 0.8125rem;
+    color: rgba(244, 239, 226, 0.75);
   }
 
-  &__control {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-top: 1rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $color-muted;
+  // Phones: a slim title bar, so the map and results get the space.
+  @media (max-width: $bp-mobile) {
+    padding: 0.6rem 1rem;
 
-    select {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid $color-border;
-      border-radius: 6px;
-      background: #fff;
-      font: inherit;
-      font-size: 0.9375rem;
-      font-weight: 400;
-      text-transform: none;
-      letter-spacing: normal;
-      color: $color-text;
+    &__mark {
+      width: 2rem;
+      height: 2rem;
 
-      &:focus-visible {
-        outline: 2px solid $color-accent;
-        outline-offset: 1px;
+      svg {
+        width: 1.25rem;
+        height: 1.25rem;
       }
+    }
+
+    &__title {
+      font-size: 1.125rem;
+    }
+
+    &__tagline {
+      display: none;
     }
   }
 }
 
-.zone-badge {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border-left: 6px solid rgba(0, 0, 0, 0.25);
-  background: var(--zone-color);
-  color: #111827;
+// ---------------------------------------------------------------- window chips
 
+.window {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border: 0;
+  border-bottom: 1px solid $line;
+
+  // Floated so the fieldset legend sits inside the padding like a normal label.
   &__label {
-    font-size: 0.75rem;
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
+    color: $muted;
   }
 
-  &__value {
-    font-size: 1.75rem;
-    font-weight: 700;
+  &__span {
+    margin: 0.5rem 0 0;
+    font-size: 0.8125rem;
+    color: $muted;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 0.75rem 1rem;
+  }
+}
+
+.chips {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.chip {
+  position: relative;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  span {
+    display: block;
+    min-width: 2.75rem;
+    padding: 0.4rem 0.7rem;
+    border: 1px solid $line;
+    border-radius: 999px;
+    background: $card;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-align: center;
+    color: $ink;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+
+  &:hover span {
+    border-color: $moss;
+  }
+
+  input:checked + span {
+    border-color: $forest;
+    background: $forest;
+    color: #fffaf0;
+  }
+
+  input:focus-visible + span {
+    outline: 2px solid $terracotta;
+    outline-offset: 2px;
+  }
+}
+
+.window:disabled .chip {
+  cursor: progress;
+  opacity: 0.6;
+}
+
+// ---------------------------------------------------------------- intro
+
+.intro {
+  padding: 1.75rem 0.25rem 0;
+  text-align: center;
+
+  &__art {
+    display: inline-grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #e7f0dc, #d5e4c3);
+    color: $forest;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__title {
+    margin: 1rem 0 0.4rem;
+    font-size: 1.375rem;
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 30ch;
+    color: $muted;
+  }
+
+  &__key {
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+  }
+
+  &__key-item {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    padding: 0.6rem 0;
+    border-top: 1px solid $line;
+    font-size: 0.875rem;
+    color: $muted;
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    b {
+      color: $ink;
+    }
+
+    &--bulletproof svg {
+      color: $moss;
+    }
+
+    &--marginal svg {
+      color: $amber;
+    }
+
+    &--protect svg {
+      color: $terracotta;
+    }
+  }
+}
+
+// ---------------------------------------------------------------- place
+
+.place {
+  padding-top: 1.25rem;
+
+  &__eyebrow {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $moss;
+  }
+
+  &__name {
+    margin: 0.15rem 0 0.9rem;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  &__empty {
+    color: $muted;
+  }
+}
+
+// Seed-packet style zone card: the zone color is the packet.
+.zone-card {
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(31, 42, 34, 0.12);
+  border-radius: $radius;
+  background: $card;
+
+  &__badge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 6rem;
+    padding: 0.75rem;
+    background: var(--zone);
+    color: $ink;
+
+    span {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.75;
+    }
+
+    strong {
+      font-family: $font-display;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+
+    p {
+      margin: 0;
+    }
   }
 
   &__range {
-    margin-left: auto;
+    font-family: $font-display;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  &__avg {
     font-size: 0.875rem;
+    color: $muted;
+
+    b {
+      color: $ink;
+    }
+  }
+
+  &__window {
+    margin-top: 0.25rem !important;
+    font-size: 0.75rem;
+    color: $muted;
   }
 }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: 0.5rem;
+  margin: 0.75rem 0 0;
+
+  div {
+    padding: 0.55rem 0.75rem;
+    border: 1px solid $line;
+    border-radius: 10px;
+    background: $card;
+  }
+
+  dt {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $muted;
+  }
+
+  dd {
+    margin: 0.1rem 0 0;
+    font-family: $font-display;
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    small {
+      display: block;
+      font-family: $font-body;
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: $muted;
+    }
+  }
+}
+
+// ---------------------------------------------------------------- tabs
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin: 1.25rem 0 0.75rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: #ece5d5;
+
+  &__tab {
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $muted;
+    cursor: pointer;
+
+    &[aria-selected='true'] {
+      background: $card;
+      color: $forest;
+      box-shadow: 0 1px 3px rgba(31, 42, 34, 0.12);
+    }
+
+    &:focus-visible {
+      outline: 2px solid $terracotta;
+      outline-offset: 2px;
+    }
+  }
+}
+
+// ---------------------------------------------------------------- palms
+
+.palm-group {
+  margin-bottom: 0.75rem;
+  border: 1px solid $line;
+  border-radius: $radius;
+  background: $card;
+  overflow: hidden;
+
+  &--bulletproof {
+    --accent: #{$moss};
+    --tint: #eef5e8;
+  }
+
+  &--marginal {
+    --accent: #{$amber};
+    --tint: #fbf3df;
+  }
+
+  &--protect {
+    --accent: #{$terracotta};
+    --tint: #fbece4;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.7rem 0.9rem;
+    background: var(--tint);
+  }
+
+  &__icon {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: $card;
+    color: var(--accent);
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+  }
+
+  &__label {
+    margin: 0;
+    font-size: 1.0625rem;
+    color: var(--accent);
+  }
+
+  &__hint {
+    margin: 0;
+    font-size: 0.75rem;
+    color: $muted;
+  }
+
+  &__count {
+    margin-left: auto;
+    min-width: 1.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 999px;
+    background: $card;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--accent);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0.25rem 0.9rem 0.5rem;
+    list-style: none;
+  }
+
+  &__none {
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    font-size: 0.8125rem;
+    font-style: italic;
+    color: $muted;
+  }
+}
+
+.palm {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed $line;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  // Leaf bullet in the group's accent color.
+  &::before {
+    content: '';
+    grid-row: span 3;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-top: 0.4rem;
+    border-radius: 0 60% 0 60%;
+    background: var(--accent);
+  }
+
+  &__common {
+    font-weight: 600;
+  }
+
+  &__name {
+    font-size: 0.8125rem;
+    font-style: italic;
+    color: $muted;
+  }
+
+  &__note {
+    font-size: 0.75rem;
+    color: $terracotta;
+  }
+}
+
+// ---------------------------------------------------------------- winters chart
 
 .winters {
-  width: 100%;
-  margin-top: 1rem;
-  border-collapse: collapse;
-  font-size: 0.875rem;
+  &__title {
+    margin: 0;
+    font-size: 1.0625rem;
+  }
 
-  caption {
-    margin-bottom: 0.25rem;
-    text-align: left;
+  &__hint,
+  &__note {
+    margin: 0.2rem 0 0.75rem;
     font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $color-muted;
+    color: $muted;
   }
 
-  th,
-  td {
-    padding: 0.3rem 0;
-    border-bottom: 1px solid $color-border;
-    text-align: left;
-  }
-
-  th {
-    font-weight: 600;
-    color: $color-muted;
-  }
-
-  td:nth-child(2) {
-    font-weight: 600;
-  }
-
-  td:last-child,
-  th:last-child {
-    text-align: right;
-    color: $color-muted;
+  &__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
+.winter {
+  display: grid;
+  grid-template-columns: 3.6rem 1fr 3.4rem 3.2rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2px 0;
+  font-size: 0.8125rem;
+
+  &:hover {
+    background: rgba(127, 168, 101, 0.1);
+  }
+
+  &__season {
+    color: $muted;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__track {
+    position: relative;
+    height: 0.8rem;
+
+    // Average line, at the same position on every row.
+    &::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      bottom: -3px;
+      left: var(--avg);
+      border-left: 1.5px dashed rgba(31, 42, 34, 0.45);
+    }
+  }
+
+  &__bar {
+    display: block;
+    height: 100%;
+    min-width: 2px;
+    border-radius: 0 4px 4px 0;
+    background: var(--bar);
+    box-shadow: inset 0 0 0 1px rgba(31, 42, 34, 0.12);
+  }
+
+  &__temp {
+    font-weight: 600;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__date {
+    font-size: 0.75rem;
+    color: $muted;
+    text-align: right;
+  }
+
+  &__none {
+    grid-column: span 3;
+    font-style: italic;
+    color: $muted;
+  }
+}
+
+// ---------------------------------------------------------------- map chrome
+
 .legend {
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 0.8rem;
+  border: 1px solid $line;
+  border-radius: 10px;
+  background: rgba(251, 248, 241, 0.95);
+  box-shadow: 0 2px 10px rgba(31, 42, 34, 0.12);
+  font-family: $font-body;
   font-size: 0.75rem;
-  color: $color-text;
+  color: $ink;
 
   &__title {
     margin: 0 0 0.35rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-family: $font-display;
+    font-size: 0.875rem;
   }
 
   &__list {
@@ -194,7 +717,7 @@ body {
     li {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.45rem;
       padding: 0.1rem 0;
     }
 
@@ -203,15 +726,15 @@ body {
     }
 
     span:last-child {
-      color: $color-muted;
+      color: $muted;
     }
   }
 
   &__swatch {
     width: 1.25rem;
     height: 0.8rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(31, 42, 34, 0.15);
   }
 
   // Phones: one compact row of swatches so the legend doesn't cover the coast.
@@ -243,151 +766,43 @@ body {
   }
 }
 
-.info {
-  &__name {
-    margin: 0;
-    font-size: 1.5rem;
-  }
+.leaflet-container {
+  font-family: $font-body;
+}
 
-  &__type {
-    margin: 0.25rem 0 1rem;
-    color: $color-muted;
-  }
+.leaflet-bar {
+  border: 1px solid $line !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(31, 42, 34, 0.12) !important;
 
-  &__list {
-    margin: 0;
+  a {
+    background: $panel;
+    color: $forest;
 
-    div {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid $color-border;
+    &:hover {
+      background: #efe8d8;
+      color: $forest;
     }
-
-    dt {
-      color: $color-muted;
-    }
-
-    dd {
-      margin: 0;
-      font-weight: 600;
-      text-align: right;
-    }
-  }
-
-  &__climate {
-    margin-top: 0.5rem;
-  }
-
-  &__section-title {
-    margin: 0 0 0.25rem;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: $color-muted;
-
-    span {
-      text-transform: none;
-      letter-spacing: normal;
-    }
-  }
-
-  &__note {
-    margin: 0 0 0.5rem;
-    font-size: 0.8125rem;
-    color: $color-muted;
-  }
-
-  &__pending {
-    font-weight: 400 !important;
-    font-style: italic;
-    color: $color-muted;
-  }
-
-  &__empty {
-    color: $color-muted;
-  }
-
-  &__error {
-    color: $color-error;
   }
 }
 
-.palms {
-  margin-top: 1.25rem;
+.leaflet-tooltip {
+  padding: 0.3rem 0.6rem;
+  border: 0;
+  border-radius: 6px;
+  background: $forest;
+  box-shadow: 0 2px 8px rgba(31, 42, 34, 0.25);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fffaf0;
 
-  &__group {
-    margin-top: 0.75rem;
-    padding: 0.6rem 0.75rem;
-    border-left: 4px solid var(--palm-accent);
-    border-radius: 6px;
-    background: var(--palm-bg);
-
-    &--bulletproof {
-      --palm-accent: #2e7d5b;
-      --palm-bg: #ecf7f1;
-    }
-
-    &--marginal {
-      --palm-accent: #c58a0c;
-      --palm-bg: #fdf6e3;
-    }
-
-    &--protect {
-      --palm-accent: #b45309;
-      --palm-bg: #fdf0e7;
-    }
+  &::before {
+    display: none;
   }
+}
 
-  &__label {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    font-size: 0.9375rem;
-    color: var(--palm-accent);
-
-    span {
-      font-weight: 400;
-      color: $color-muted;
-    }
-  }
-
-  &__hint {
-    margin: 0.1rem 0 0.4rem;
-    font-size: 0.75rem;
-    color: $color-muted;
-  }
-
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 0.875rem;
-
-    li {
-      padding: 0.2rem 0;
-    }
-
-    i {
-      color: $color-muted;
-    }
-  }
-
-  &__common {
-    font-weight: 600;
-  }
-
-  &__note {
-    display: block;
-    font-size: 0.75rem;
-    color: $color-muted;
-  }
-
-  &__none {
-    margin: 0;
-    font-size: 0.8125rem;
-    font-style: italic;
-    color: $color-muted;
-  }
+.leaflet-control-attribution {
+  background: rgba(251, 248, 241, 0.85) !important;
+  color: $muted;
 }

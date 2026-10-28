@@ -12,7 +12,9 @@ import { DEFAULT_WINDOW, createClimate, windowLabel, zoneRange } from './zones.j
 async function init() {
   const map = createMap('map');
   const panel = createInfoPanel(document.getElementById('info-body'));
-  const select = document.getElementById('zone-window');
+  const windowSet = document.querySelector('.window');
+  const chips = document.getElementById('zone-window');
+  const spanText = document.getElementById('window-span');
 
   let years = DEFAULT_WINDOW;
   let selection = null; // what the panel is showing, so it can re-render on window change
@@ -26,10 +28,19 @@ async function init() {
     const climate = createClimate(lows, elevation);
 
     if (!climate.windows.includes(years)) years = climate.windows[0];
-    select.innerHTML = climate.windows.map((n) => {
-      const { title, span } = windowLabel(n, climate.seasons);
-      return `<option value="${n}"${n === years ? ' selected' : ''}>${title} (${span})</option>`;
-    }).join('');
+    chips.innerHTML = climate.windows
+      .map((n) => {
+        const { title } = windowLabel(n, climate.seasons);
+        return `<label class="chip" title="${title}">
+          <input type="radio" name="zone-window" value="${n}"${n === years ? ' checked' : ''} />
+          <span>${n === 1 ? '1 yr' : `${n} yrs`}</span>
+        </label>`;
+      })
+      .join('');
+    const showSpan = () => {
+      spanText.textContent = `Winters ${windowLabel(years, climate.seasons).span}`;
+    };
+    showSpan();
 
     let grid = null;
 
@@ -74,12 +85,13 @@ async function init() {
 
     addLegend(map, grid.zonesInUse(climate.windows).sort((a, b) => zoneRange(a)[0] - zoneRange(b)[0]));
 
-    select.addEventListener('change', () => {
-      years = Number(select.value);
+    chips.addEventListener('change', (e) => {
+      years = Number(e.target.value);
+      showSpan();
       grid.render(years);
       showSelection();
     });
-    select.disabled = false;
+    windowSet.disabled = false;
   } catch (err) {
     console.error(err);
     panel.showError(

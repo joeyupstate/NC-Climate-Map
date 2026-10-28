@@ -4,20 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NC Climate Map</title>
+    <meta name="description" content="North Carolina plant hardiness zones and palm recommendations from 20 winters of real low-temperature data." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="app">
       <aside class="panel" id="info-panel" aria-live="polite">
-        <header class="panel__header">
-          <h1 class="panel__title">NC Climate Map</h1>
-          <p class="panel__subtitle">Plant hardiness zones from our own low-temperature data. Click a city or town for details.</p>
-          <label class="panel__control" for="zone-window">
-            <span>Zone based on</span>
-            <select id="zone-window" disabled>
-              <option>Loading…</option>
-            </select>
-          </label>
+        <header class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 9c-.5 4-.2 8 1 13" />
+              <path d="M12 9C10 6 6.5 5 3 6.5c3 .3 5.5 1.5 9 2.5z" />
+              <path d="M12 9c2-3 5.5-4 9-2.5-3 .3-5.5 1.5-9 2.5z" />
+              <path d="M12 9c-1.5-2.5-1.5-5 0-7.5 1.5 2.5 1.5 5 0 7.5z" />
+              <path d="M12 9c-3 .5-5.5 2.5-6.5 5.5 2.5-1.5 4.5-3 6.5-5.5z" />
+              <path d="M12 9c3 .5 5.5 2.5 6.5 5.5-2.5-1.5-4.5-3-6.5-5.5z" />
+            </svg>
+          </span>
+          <div>
+            <h1 class="brand__title">NC Climate Map</h1>
+            <p class="brand__tagline">Hardiness zones &amp; palms from 20 winters of real temperature data</p>
+          </div>
         </header>
+
+        <fieldset class="window" disabled>
+          <legend class="window__label">Zone based on the past</legend>
+          <div class="chips" id="zone-window"></div>
+          <p class="window__span" id="window-span">Loading data…</p>
+        </fieldset>
+
         <div class="panel__body" id="info-body"></div>
       </aside>
       <div class="map" id="map" role="application" aria-label="Map of North Carolina"></div>

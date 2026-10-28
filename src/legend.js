@@ -2,7 +2,7 @@ import L from 'leaflet';
 import { zoneColor, zoneRange } from './zones.js';
 
 export function addLegend(map, zones) {
-  const legend = L.control({ position: 'bottomright' });
+  const legend = L.control({ position: 'topright' });
 
   legend.onAdd = () => {
     const el = L.DomUtil.create('div', 'legend');
