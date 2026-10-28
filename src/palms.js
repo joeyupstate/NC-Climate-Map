@@ -2,6 +2,8 @@ import { zoneRange } from './zones.js';
 
 // Cold-hardy palms for NC. Temperatures (°F) are approximate:
 //   damage = leaves start to burn, kill = palm is usually killed.
+//   zones (optional) = category set by hand for specific zones, from grower
+//   experience; it wins over the temperature rules for those zones.
 // List and thresholds reviewed by the project owner.
 export const PALMS = [
   { name: 'Rhapidophyllum hystrix', common: 'Needle palm', damage: -5, kill: -15 },
@@ -12,12 +14,17 @@ export const PALMS = [
   { name: 'Trachycarpus fortunei', common: 'Windmill palm', damage: 5, kill: 0 },
   { name: 'Trachycarpus wagnerianus', common: "Wagner's windmill palm", damage: 5, kill: 0 },
   { name: 'Serenoa repens', common: 'Saw palmetto', damage: 12, kill: 5 },
-  { name: 'Trithrinax campestris', common: 'Caranday palm', damage: 12, kill: 5 },
   { name: 'Sabal palmetto', common: 'Cabbage palm', damage: 15, kill: 5 },
   { name: 'Chamaerops humilis', common: 'Mediterranean fan palm', damage: 15, kill: 5 },
   { name: 'Butia odorata', common: 'Pindo / jelly palm', damage: 15, kill: 8 },
   { name: 'Sabal mexicana', common: 'Texas palmetto', damage: 15, kill: 8 },
-  { name: '× Butyagrus nabonnandii', common: 'Mule palm', damage: 15, kill: 10 },
+  {
+    name: '× Butyagrus nabonnandii',
+    common: 'Mule palm',
+    damage: 15,
+    kill: 10,
+    zones: { '8a': 'protect', '8b': 'marginal', '9a': 'marginal' },
+  },
   { name: 'Brahea armata', common: 'Mexican blue palm', damage: 15, kill: 10, note: 'Needs excellent drainage' },
   { name: 'Washingtonia × filibusta', common: 'Filibusta fan palm', damage: 18, kill: 12 },
   { name: 'Phoenix canariensis', common: 'Canary Island date palm', damage: 20, kill: 12 },
@@ -39,6 +46,7 @@ const PROTECTION_F = 10;
 
 // 'bulletproof' | 'marginal' | 'protect' | null (too cold even with protection)
 export function palmCategory(palm, zone) {
+  if (palm.zones && zone in palm.zones) return palm.zones[zone];
   const [low] = zoneRange(zone);
   if (palm.kill <= low - BAD_WINTER_F && palm.damage <= low) return 'bulletproof';
   if (palm.kill <= low) return 'marginal';
