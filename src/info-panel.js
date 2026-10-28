@@ -1,4 +1,5 @@
 import { zoneColor, zoneRange, seasonLabel } from './zones.js';
+import { CATEGORIES, palmsForZone } from './palms.js';
 
 const TYPE_LABELS = {
   city: 'City',
@@ -14,6 +15,27 @@ const formatDate = (iso) =>
   new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
 
 const formatTemp = (t) => `${t.toFixed(Number.isInteger(t) ? 0 : 1)}°F`;
+
+function palmSection(zone) {
+  const groups = palmsForZone(zone);
+  const lists = CATEGORIES.map(({ key, label, hint }) => {
+    const items = groups[key]
+      .map(({ name, common, note }) =>
+        `<li><span class="palms__common">${escape(common)}</span> <i>${escape(name)}</i>${note ? `<span class="palms__note">${escape(note)}</span>` : ''}</li>`)
+      .join('');
+    return `
+      <div class="palms__group palms__group--${key}">
+        <h4 class="palms__label">${label} <span>${groups[key].length}</span></h4>
+        <p class="palms__hint">${hint}</p>
+        ${items ? `<ul class="palms__list">${items}</ul>` : '<p class="palms__none">None for this zone</p>'}
+      </div>`;
+  }).join('');
+  return `
+    <section class="palms">
+      <h3 class="info__section-title">Palms for zone ${zone}</h3>
+      ${lists}
+    </section>`;
+}
 
 // climate: result of climate.get(), window: { title, span }, note: optional source caveat.
 function climateSection(climate, window, note = '') {
@@ -42,6 +64,7 @@ function climateSection(climate, window, note = '') {
         <div><dt>Avg. coldest night</dt><dd>${formatTemp(climate.avgLow)}</dd></div>
         ${climate.elevation != null ? `<div><dt>Elevation</dt><dd>${climate.elevation.toLocaleString()} ft</dd></div>` : ''}
       </dl>
+      ${palmSection(climate.zone)}
       <table class="winters">
         <caption>Coldest night each winter</caption>
         <thead><tr><th>Winter</th><th>Low</th>${hasDates ? '<th>Date</th>' : ''}</tr></thead>
