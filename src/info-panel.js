@@ -9,7 +9,6 @@ const TYPE_LABELS = {
 };
 
 const ICONS = {
-  palm: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9c-.5 4-.2 8 1 13"/><path d="M12 9C10 6 6.5 5 3 6.5c3 .3 5.5 1.5 9 2.5z"/><path d="M12 9c2-3 5.5-4 9-2.5-3 .3-5.5 1.5-9 2.5z"/><path d="M12 9c-1.5-2.5-1.5-5 0-7.5 1.5 2.5 1.5 5 0 7.5z"/><path d="M12 9c-3 .5-5.5 2.5-6.5 5.5 2.5-1.5 4.5-3 6.5-5.5z"/><path d="M12 9c3 .5 5.5 2.5 6.5 5.5-2.5-1.5-4.5-3-6.5-5.5z"/></svg>`,
   bulletproof: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>`,
   marginal: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4"/><path d="M12 17.5v.01"/></svg>`,
   protect: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M4.5 6.5l15 11M19.5 6.5l-15 11"/><path d="M9.5 3.5L12 5l2.5-1.5M9.5 20.5L12 19l2.5 1.5"/></svg>`,
@@ -148,7 +147,7 @@ export function createInfoPanel(el) {
   function intro() {
     render(`
       <div class="intro">
-        <span class="intro__art">${ICONS.palm}</span>
+        <span class="intro__art"><img src="${import.meta.env.BASE_URL}palm-illustration.png" alt="" /></span>
         <h2 class="intro__title">Pick a spot on the map</h2>
         <p>Click any town or place in North Carolina to see its hardiness zone, its coldest nights, and which palms will grow there.</p>
         <ul class="intro__key">
