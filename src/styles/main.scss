@@ -249,19 +249,12 @@ h3 {
   padding: 1.75rem 0.25rem 0;
   text-align: center;
 
-  &__art {
-    display: inline-grid;
-    place-items: center;
-    width: 11rem;
-    height: 11rem;
-    border-radius: 50%;
-    background: radial-gradient(circle at 50% 40%, #fffdf7 0%, #efe8d6 70%);
-
-    img {
-      width: 82%;
-      height: 82%;
-      object-fit: contain;
-    }
+  &__art img {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    object-fit: contain;
   }
 
   &__title {
