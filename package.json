@@ -1,0 +1,24 @@
+{
+  "name": "nc-climate-map",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:geo": "bash scripts/build-geo.sh",
+    "fetch:lows": "node scripts/fetch-lows.js",
+    "check:data": "node scripts/check-data.js",
+    "fetch:grid800": "node scripts/fetch-grid-800m.js"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "geotiff": "^2.1.3",
+    "mapshaper": "^0.7.97",
+    "sass": "^1.106.1",
+    "vite": "^6.3.5"
+  }
+}

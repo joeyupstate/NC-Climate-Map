@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NC Climate Map</title>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="panel" id="info-panel" aria-live="polite">
+        <header class="panel__header">
+          <h1 class="panel__title">NC Climate Map</h1>
+          <p class="panel__subtitle">Plant hardiness zones from our own low-temperature data. Click a city or town for details.</p>
+          <label class="panel__control" for="zone-window">
+            <span>Zone based on</span>
+            <select id="zone-window" disabled>
+              <option>Loading…</option>
+            </select>
+          </label>
+        </header>
+        <div class="panel__body" id="info-body"></div>
+      </aside>
+      <div class="map" id="map" role="application" aria-label="Map of North Carolina"></div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,778 @@
+name,geoid,type,county,lat,lon
+Waxhaw,3771460,town,Union,34.93346,-80.75502
+Southern Shores,3763130,town,Dare,36.1188,-75.73282
+Asheboro,3702080,city,Randolph,35.7037,-79.81129
+Kinston,3735920,city,Lenoir,35.28237,-77.59229
+Autryville,3702700,town,Sampson,34.99662,-78.64111
+Orrum,3749460,town,Robeson,34.46669,-79.0089
+Roxobel,3758180,town,Bertie,36.20154,-77.23981
+Maiden,3740660,town,Catawba,35.57942,-81.21559
+Calypso,3709760,town,Duplin,35.15455,-78.10456
+Midland,3742760,town,Cabarrus,35.24497,-80.52627
+Ossipee,3749600,town,Alamance,36.16745,-79.51464
+Winton,3775080,town,Hertford,36.38828,-76.93651
+Raynham,3755340,town,Robeson,34.57613,-79.19079
+Elizabeth City,3720580,city,Pasquotank,36.29238,-76.22801
+Atkinson,3702460,town,Pender,34.52746,-78.16968
+Oak Ridge,3748480,town,Guilford,36.17321,-79.99079
+Green Level,3727870,town,Alamance,36.12093,-79.3458
+Garysburg,3725540,town,Northampton,36.44713,-77.56114
+Leggett,3737640,town,Edgecombe,35.98952,-77.58009
+Topsail Beach,3768040,town,Pender,34.36694,-77.64171
+Askewville,3702320,town,Bertie,36.1114,-76.94131
+Kittrell,3736020,town,Vance,36.22181,-78.44138
+Speed,3763720,town,Edgecombe,35.96851,-77.4445
+Bolivia,3706820,town,Brunswick,34.06966,-78.14797
+Ansonville,3701420,town,Anson,35.10413,-80.10967
+Gibson,3725940,town,Scotland,34.75952,-79.60688
+Grover,3728400,town,Cleveland,35.17352,-81.45197
+Morrisville,3744520,town,Wake,35.83958,-78.82015
+Crossnore,3715580,town,Avery,36.02227,-81.93074
+Dublin,3718040,town,Bladen,34.65591,-78.72479
+Morven,3744560,town,Anson,34.86382,-79.99969
+Cerro Gordo,3711620,town,Columbus,34.32254,-78.92865
+Cove City,3715020,town,Craven,35.18902,-77.32056
+Walkertown,3770660,town,Forsyth,36.16719,-80.1442
+Mount Holly,3744960,city,Gaston,35.30025,-81.01496
+Bethel,3705460,town,Pitt,35.80709,-77.37574
+Fountain,3724440,town,Pitt,35.67089,-77.62937
+Creswell,3715420,town,Washington,35.87012,-76.39246
+Middleburg,3742640,town,Vance,36.39897,-78.32346
+Marble,3741220,cdp,Cherokee,35.17706,-83.92647
+Henrietta,3730800,cdp,Rutherford,35.25618,-81.80291
+Dundarrach,3718300,cdp,Hoke,34.92488,-79.15843
+Hatteras,3730100,cdp,Dare,35.21777,-75.68719
+Mountain Home,3744700,cdp,Henderson,35.36973,-82.5027
+Crouse,3715640,cdp,Lincoln,35.42103,-81.30413
+Chowan Beach,3712590,cdp,Chowan,36.21416,-76.71068
+Rodanthe,3757580,cdp,Dare,35.59235,-75.4661
+Hiddenite,3731260,cdp,Alexander,35.90611,-81.08681
+Brandywine Bay,3707588,cdp,Carteret,34.73842,-76.83027
+Lowgap,3739540,cdp,Surry,36.52469,-80.86683
+McDonald,3740140,town,Robeson,34.5537,-79.17628
+Marietta,3741380,town,Robeson,34.36844,-79.12489
+Proctorville,3753900,town,Robeson,34.47495,-79.03744
+Lexington,3738060,city,Davidson,35.80082,-80.26763
+Seven Springs,3760540,town,Wayne,35.22491,-77.84521
+Earl,3719140,town,Cleveland,35.19543,-81.53396
+Mooresboro,3744160,town,Cleveland,35.2992,-81.69858
+Winston-Salem,3775000,city,Forsyth,36.10318,-80.26078
+Morehead City,3744320,town,Carteret,34.72533,-76.71086
+Dellview,3716820,town,Gaston,35.3871,-81.41255
+Lucama,3739600,town,Wilson,35.64472,-78.00774
+Stantonsburg,3764560,town,Wilson,35.60612,-77.81931
+Graham,3727280,city,Alamance,36.05987,-79.39792
+McFarlan,3740240,town,Anson,34.81482,-79.97663
+Lansing,3736960,town,Ashe,36.4987,-81.50973
+Pinetops,3752140,town,Edgecombe,35.79116,-77.6378
+Rocky Mount,3757500,city,Nash,35.95941,-77.8133
+Goldston,3726920,town,Chatham,35.59301,-79.32872
+Micro,3742620,town,Johnston,35.56202,-78.20364
+Hope Mills,3732640,town,Cumberland,34.97144,-78.95036
+Morganton,3744400,city,Burke,35.74053,-81.68593
+Carolina Beach,3710500,town,New Hanover,34.04005,-77.89702
+Valdese,3769520,town,Burke,35.74435,-81.56311
+Simpson,3762040,village,Pitt,35.57557,-77.27878
+Carthage,3710680,town,Moore,35.342,-79.4143
+Southern Pines,3763120,town,Moore,35.1878,-79.3935
+Harrisburg,3729800,town,Cabarrus,35.32506,-80.65106
+Albemarle,3700680,city,Stanly,35.35922,-80.19316
+Fuquay-Varina,3725300,town,Wake,35.59104,-78.79691
+Norman,3747260,town,Richmond,35.16969,-79.7229
+Wagram,3770480,town,Scotland,34.88911,-79.36523
+Cedar Rock,3711352,village,Caldwell,35.9435,-81.45838
+Fremont,3724900,town,Wayne,35.54364,-77.97513
+Arrowhead Beach,3701972,cdp,Chowan,36.22667,-76.70216
+Carolina Meadows,3710532,cdp,Chatham,35.85949,-79.01789
+Dudley,3718080,cdp,Wayne,35.26608,-78.03819
+Jackson Springs,3734160,cdp,Moore,35.21094,-79.62861
+Dillsboro,3717180,town,Jackson,35.37006,-83.25247
+Kings Grant,3735870,cdp,New Hanover,34.2648,-77.86351
+Jacksonville,3734200,city,Onslow,34.7359,-77.41596
+Kelly,3735440,cdp,Bladen,34.46345,-78.30628
+Whittier,3773780,cdp,Jackson,35.43382,-83.35631
+Rex,3756100,cdp,Robeson,34.85077,-79.04684
+Spivey's Corner,3763920,cdp,Sampson,35.19034,-78.47884
+Fearrington Village,3722982,cdp,Chatham,35.79956,-79.08179
+Bear Grass,3704180,town,Martin,35.76646,-77.12893
+Bolton,3706860,town,Columbus,34.31741,-78.40136
+Caswell Beach,3710960,town,Brunswick,33.90722,-78.04686
+Varnamtown,3769795,town,Brunswick,33.94399,-78.23563
+Magnolia,3740640,town,Duplin,34.89528,-78.05507
+Clyde,3713280,town,Haywood,35.53303,-82.91073
+Castalia,3710860,town,Nash,36.08226,-78.0575
+Jackson,3734000,town,Northampton,36.39008,-77.41931
+Severn,3760560,town,Northampton,36.51424,-77.18934
+New Bern,3746340,city,Craven,35.12041,-77.09018
+Mooresville,3744220,town,Iredell,35.58299,-80.81511
+Huntersville,3733120,town,Mecklenburg,35.40593,-80.87762
+Shelby,3761200,city,Cleveland,35.29082,-81.5395
+Dobbins Heights,3717325,town,Richmond,34.9068,-79.69297
+Centerville,3711560,cdp,Franklin,36.18619,-78.11004
+Cofield,3713460,village,Hertford,36.35668,-76.91052
+Pumpkin Center,3754160,cdp,Onslow,34.78626,-77.36332
+Kings Mountain,3735880,city,Cleveland,35.23551,-81.34713
+Everetts,3722040,town,Martin,35.83461,-77.17212
+Concord,3714100,city,Cabarrus,35.40046,-80.63908
+Mount Airy,3744800,city,Surry,36.51304,-80.6133
+Conway,3714400,town,Northampton,36.4371,-77.22882
+Kannapolis,3735200,city,Cabarrus,35.47667,-80.62981
+Macon,3740540,town,Warren,36.43995,-78.08333
+Washington Park,3771240,town,Beaufort,35.53246,-77.0316
+South Weldon,3763560,cdp,Halifax,36.41354,-77.60238
+Fairfield Harbour,3722305,cdp,Craven,35.07062,-76.95706
+Coinjock,3713500,cdp,Currituck,36.35151,-75.95286
+Bayview,3704040,cdp,Beaufort,35.44181,-76.79293
+Delco,3716780,cdp,Columbus,34.31927,-78.22671
+Caroleen,3710460,cdp,Rutherford,35.28056,-81.79123
+Moncure,3743880,cdp,Chatham,35.62644,-79.07594
+Germanton,3725880,cdp,Stokes,36.25695,-80.24375
+Mamers,3740860,cdp,Harnett,35.416,-78.9391
+Cypress Landing,3716084,cdp,Beaufort,35.49779,-77.05482
+Myrtle Grove,3745840,cdp,New Hanover,34.12306,-77.8836
+Harkers Island,3729560,cdp,Carteret,34.70387,-76.57202
+Vander,3769740,cdp,Cumberland,35.03771,-78.79329
+Denver,3717000,cdp,Lincoln,35.53496,-81.03353
+Marshallberg,3741600,cdp,Carteret,34.72668,-76.51505
+Farmington,3722800,cdp,Davie,36.01282,-80.5329
+Scotch Meadows,3759765,cdp,Scotland,34.68892,-79.51773
+JAARS,3733993,cdp,Union,34.86227,-80.74892
+Chimney Rock Village,3712460,village,Rutherford,35.4504,-82.25498
+Indian Trail,3733560,town,Union,35.06101,-80.64523
+Reidsville,3755900,city,Rockingham,36.33811,-79.67286
+Knightdale,3736080,town,Wake,35.79351,-78.50834
+East Bend,3719320,town,Yadkin,36.21776,-80.50846
+Powellsville,3753680,town,Bertie,36.22527,-76.93157
+Lenoir,3737760,city,Caldwell,35.90661,-81.53244
+Lillington,3738220,town,Harnett,35.39779,-78.81217
+Ronda,3757700,town,Wilkes,36.22198,-80.94308
+Conover,3714340,city,Catawba,35.70815,-81.21888
+Charlotte,3712000,city,Mecklenburg,35.20134,-80.82613
+Holden Beach,3731960,town,Brunswick,33.90715,-78.3705
+Hendersonville,3730720,city,Henderson,35.31756,-82.4632
+Sanford,3759280,city,Lee,35.4831,-79.19173
+Lewiston Woodville,3738030,town,Bertie,36.1141,-77.18116
+Linden,3738360,town,Cumberland,35.25456,-78.74762
+Waco,3770320,town,Cleveland,35.36225,-81.42868
+Lewisville,3738040,town,Forsyth,36.10192,-80.41613
+Beulaville,3705660,town,Duplin,34.92241,-77.77161
+Aberdeen,3700160,town,Moore,35.13293,-79.42666
+Bayboro,3703960,town,Pamlico,35.14723,-76.76911
+High Shoals,3731440,city,Gaston,35.39586,-81.20284
+Pinetown,3752160,cdp,Beaufort,35.61108,-76.85583
+Sea Breeze,3760000,cdp,New Hanover,34.06856,-77.89648
+Deercroft,3716730,cdp,Scotland,34.95924,-79.4351
+Grimesland,3728240,town,Pitt,35.5623,-77.19137
+Waynesville,3771500,town,Haywood,35.48135,-82.99575
+Newton,3747000,city,Catawba,35.66902,-81.22666
+Oak City,3748060,town,Martin,35.96252,-77.30509
+Conetoe,3714200,town,Edgecombe,35.8178,-77.4571
+Falcon,3722620,town,Cumberland,35.19267,-78.6507
+Engelhard,3721380,cdp,Hyde,35.50919,-76.00947
+Asheville,3702140,city,Buncombe,35.58829,-82.55395
+Bethania,3705340,town,Forsyth,36.18139,-80.33743
+Seaboard,3759980,town,Northampton,36.49068,-77.44196
+Dover,3717660,town,Craven,35.21545,-77.43383
+Alexis,3700880,cdp,Gaston,35.39676,-81.119
+Wesley Chapel,3771940,village,Union,35.0059,-80.67487
+Roberdel,3757039,cdp,Richmond,34.9773,-79.7468
+Brogden,3708110,cdp,Wayne,35.29612,-78.02497
+Tobaccoville,3767720,village,Forsyth,36.22157,-80.3372
+Spencer Mountain,3763780,town,Gaston,35.30705,-81.11089
+Garland,3725460,town,Sampson,34.78569,-78.39433
+Parmele,3750540,town,Martin,35.8181,-77.31433
+Colerain,3713560,town,Bertie,36.20137,-76.76659
+Leland,3737680,town,Brunswick,34.18102,-78.02282
+Fairfield,3722280,cdp,Hyde,35.54715,-76.22613
+Iron Station,3733820,cdp,Lincoln,35.4511,-81.15696
+Macclesfield,3739960,town,Edgecombe,35.75206,-77.67043
+Bald Head Island,3703150,village,Brunswick,33.86449,-77.99133
+Manteo,3741060,town,Dare,35.90714,-75.6728
+Burnsville,3709140,town,Yancey,35.91631,-82.29758
+Spring Lake,3764180,town,Cumberland,35.1808,-78.93697
+Sedalia,3760180,town,Guilford,36.07572,-79.62092
+Elkin,3720620,town,Surry,36.25752,-80.84775
+Badin,3702960,town,Stanly,35.40689,-80.12148
+Saratoga,3759340,town,Wilson,35.65366,-77.77562
+Aurora,3702620,town,Beaufort,35.30336,-76.78911
+Highlands,3731360,town,Macon,35.05437,-83.20146
+Newton Grove,3747020,town,Sampson,35.25226,-78.35493
+Misenheimer,3743580,village,Stanly,35.47968,-80.28839
+Alamance,3700640,village,Alamance,36.02827,-79.48839
+Harrellsville,3729720,town,Hertford,36.30163,-76.79184
+St. Helena,3758620,village,Pender,34.51662,-77.9174
+Turkey,3768740,town,Sampson,34.9943,-78.18362
+Tabor City,3766520,town,Columbus,34.15085,-78.8735
+Eden,3720080,city,Rockingham,36.50297,-79.74337
+Stoneville,3765100,town,Rockingham,36.46569,-79.90631
+Drexel,3717860,town,Burke,35.75743,-81.6054
+Montreat,3744100,town,Buncombe,35.64781,-82.30006
+King,3735760,city,Stokes,36.27685,-80.36193
+Taylorsville,3766960,town,Alexander,35.92071,-81.17776
+Patterson Springs,3750700,town,Cleveland,35.23232,-81.51644
+Roanoke Rapids,3756900,city,Halifax,36.45164,-77.65076
+Butner,3709360,town,Granville,36.12848,-78.75036
+Troy,3768520,town,Montgomery,35.36283,-79.89358
+Hudson,3732980,town,Caldwell,35.84706,-81.48721
+Bakersville,3703100,town,Mitchell,36.01533,-82.15821
+Kill Devil Hills,3735720,town,Dare,36.00482,-75.66313
+Halifax,3728920,town,Halifax,36.32348,-77.59128
+Aulander,3702580,town,Bertie,36.22803,-77.11359
+Cramerton,3715260,town,Gaston,35.23418,-81.07328
+New London,3746820,town,Stanly,35.44313,-80.2198
+Foxfire,3724570,village,Moore,35.17454,-79.57527
+Norlina,3747240,town,Warren,36.4455,-78.19434
+La Grange,3736400,town,Lenoir,35.30564,-77.78986
+Beech Mountain,3704510,town,Watauga,36.20727,-81.88483
+Hillsborough,3731620,town,Orange,36.07827,-79.10575
+Four Oaks,3724520,town,Johnston,35.44621,-78.4279
+Newport,3746860,town,Carteret,34.7661,-76.87437
+Holly Springs,3732260,town,Wake,35.65639,-78.83665
+Rosman,3758020,town,Transylvania,35.14422,-82.82223
+Stallings,3764420,town,Union,35.10889,-80.65955
+Sylva,3766500,town,Jackson,35.37409,-83.21956
+Kenansville,3735460,town,Duplin,34.96089,-77.96446
+Gamewell,3725380,town,Caldwell,35.86444,-81.5989
+Laurel Park,3737160,town,Henderson,35.31149,-82.49572
+Brookford,3708140,town,Catawba,35.70445,-81.34514
+Pleasant Garden,3752760,town,Guilford,35.95983,-79.76173
+Spring Hope,3764160,town,Nash,35.94461,-78.10945
+Whiteville,3773660,city,Columbus,34.33288,-78.70034
+Peletier,3751040,town,Carteret,34.72115,-77.07812
+Cary,3710740,town,Wake,35.75664,-78.7946
+Haw River,3730260,town,Alamance,36.09178,-79.36495
+Lasker,3737000,town,Northampton,36.35022,-77.30578
+North Topsail Beach,3747845,town,Onslow,34.46836,-77.48695
+Raleigh,3755000,city,Wake,35.80376,-78.64135
+Belville,3704950,town,Brunswick,34.217,-77.99459
+Watha,3771320,town,Pender,34.64445,-77.9629
+Windsor,3774680,town,Bertie,35.9997,-76.95156
+Elizabethtown,3720600,town,Bladen,34.62498,-78.60605
+Mayodan,3742060,town,Rockingham,36.41401,-79.97261
+Marshville,3741640,town,Union,34.98693,-80.36934
+Emerald Isle,3721160,town,Carteret,34.66656,-77.02939
+Durham,3719000,city,Durham,35.97588,-78.91307
+Lincolnton,3738320,city,Lincoln,35.46708,-81.23949
+Ellerbe,3720840,town,Richmond,35.07057,-79.7592
+Sawmills,3759540,town,Caldwell,35.81699,-81.47843
+Murphy,3745660,town,Cherokee,35.09152,-84.0315
+Princeton,3753820,town,Johnston,35.46697,-78.16038
+Stovall,3765320,town,Granville,36.44745,-78.56885
+Fontana Dam,3723980,town,Graham,35.43392,-83.82308
+Danbury,3716240,town,Stokes,36.41106,-80.21211
+Garner,3725480,town,Wake,35.69725,-78.61687
+Laurinburg,3737220,city,Scotland,34.76021,-79.47728
+Jamestown,3734300,town,Guilford,35.99682,-79.93488
+Nashville,3746000,town,Nash,35.96666,-77.9536
+Liberty,3738100,town,Randolph,35.85555,-79.56954
+Belhaven,3704640,town,Beaufort,35.54292,-76.62316
+Wentworth,3771900,town,Rockingham,36.38972,-79.754
+Candor,3710120,town,Montgomery,35.29342,-79.74391
+Efland,3720420,cdp,Orange,36.07967,-79.16874
+Prospect,3753950,cdp,Robeson,34.73582,-79.22514
+Porters Neck,3753475,cdp,New Hanover,34.29447,-77.76924
+Pink Hill,3752400,town,Lenoir,35.05637,-77.74396
+Staley,3764380,town,Randolph,35.79768,-79.5513
+Momeyer,3743860,town,Nash,35.95917,-78.0511
+Greensboro,3728000,city,Guilford,36.0816,-79.82439
+Troutman,3768500,town,Iredell,35.70138,-80.89124
+Angier,3701400,town,Harnett,35.50689,-78.7384
+Maggie Valley,3740600,town,Haywood,35.51784,-83.09587
+Chapel Hill,3711800,town,Orange,35.92771,-79.03816
+Clarkton,3712780,town,Bladen,34.48888,-78.65587
+Gibsonville,3725980,town,Guilford,36.10426,-79.54192
+Rockwell,3757340,town,Rowan,35.55334,-80.40647
+Vass,3769840,town,Moore,35.25563,-79.28152
+Faith,3722600,town,Rowan,35.5888,-80.46095
+Beaufort,3704260,town,Carteret,34.72255,-76.65249
+Manns Harbor,3740980,cdp,Dare,35.89918,-75.77878
+South Rosemary,3763470,cdp,Halifax,36.44596,-77.70552
+Ashley Heights,3702240,cdp,Hoke,35.08917,-79.37358
+Elroy,3721130,cdp,Wayne,35.32057,-77.92369
+Gulf,3728600,cdp,Chatham,35.55839,-79.28122
+Gorman,3727120,cdp,Durham,36.04729,-78.79998
+Emma,3721260,cdp,Buncombe,35.60189,-82.59396
+Aquadale,3701560,cdp,Stanly,35.22439,-80.22355
+Broad Creek,3708040,cdp,Carteret,34.73051,-76.9241
+Pleasant Hill,3752920,cdp,Wilkes,36.25754,-80.8906
+Cullowhee,3715880,cdp,Jackson,35.30956,-83.18319
+Balfour,3703220,cdp,Henderson,35.35054,-82.48479
+Saxapahaw,3759580,cdp,Alamance,35.94573,-79.32555
+Rockfish,3757200,cdp,Hoke,34.99572,-79.06837
+Cricket,3715440,cdp,Wilkes,36.17025,-81.19529
+Davis,3716480,cdp,Carteret,34.79964,-76.46407
+Belvoir,3704955,cdp,Pitt,35.71105,-77.46996
+Silver Lake,3761950,cdp,New Hanover,34.14163,-77.90853
+Stokes,3765020,cdp,Pitt,35.71042,-77.26791
+Fairmont,3722360,town,Robeson,34.49551,-79.11395
+Parkton,3750340,town,Robeson,34.90283,-79.0113
+Pembroke,3751080,town,Robeson,34.67901,-79.19663
+Rennert,3755940,town,Robeson,34.81407,-79.07907
+Rowland,3758140,town,Robeson,34.53725,-79.29253
+St. Pauls,3758720,town,Robeson,34.80574,-78.97021
+Stokesdale,3765040,town,Guilford,36.23176,-79.98334
+Summerfield,3765580,town,Guilford,36.20919,-79.89308
+Whitsett,3773760,town,Guilford,36.07378,-79.57044
+Wallburg,3770740,town,Davidson,36.01852,-80.15044
+River Road,3756815,cdp,Beaufort,35.50239,-76.97911
+Plain View,3752685,cdp,Sampson,35.24675,-78.56291
+White Plains,3773460,cdp,Surry,36.44354,-80.63502
+Advance,3700440,cdp,Davie,35.94416,-80.4055
+Bent Creek,3705049,cdp,Buncombe,35.50812,-82.61763
+Yadkin College,3775880,cdp,Davidson,35.87561,-80.37927
+Lake Junaluska,3736480,cdp,Haywood,35.53237,-82.97257
+Wanchese,3770920,cdp,Dare,35.83979,-75.6383
+Sharpsburg,3761060,town,Nash,35.86624,-77.82986
+Tarboro,3766700,town,Edgecombe,35.90438,-77.55533
+Whitakers,3773160,town,Nash,36.1057,-77.71295
+Swepsonville,3766460,town,Alamance,36.03213,-79.3579
+Peachland,3750820,town,Anson,34.99311,-80.26599
+Polkton,3753140,town,Anson,35.00701,-80.19818
+Elm City,3720980,town,Wilson,35.78293,-77.84806
+Eastover,3719740,town,Cumberland,35.09584,-78.78623
+Sparta,3763680,town,Alleghany,36.50442,-81.12206
+West Jefferson,3772540,town,Ashe,36.4014,-81.49215
+Midway,3742860,town,Davidson,35.97569,-80.21723
+Duck,3718060,town,Dare,36.17243,-75.75215
+Grantsboro,3727520,town,Pamlico,35.14243,-76.84502
+Kernersville,3735600,town,Forsyth,36.11755,-80.08239
+Nags Head,3745880,town,Dare,35.97829,-75.64674
+Bogue,3706740,town,Carteret,34.69734,-77.03152
+Indian Beach,3733460,town,Carteret,34.68709,-76.89778
+Walnut Creek,3770820,village,Wayne,35.30683,-77.87244
+Boiling Springs,3706800,town,Cleveland,35.24939,-81.66521
+Casar,3710760,town,Cleveland,35.51274,-81.61684
+Fallston,3722720,town,Cleveland,35.42889,-81.50225
+Polkville,3753160,city,Cleveland,35.41629,-81.64398
+Cooleemee,3714460,town,Davie,35.81251,-80.55632
+Mocksville,3743720,town,Davie,35.89713,-80.55737
+Belmont,3704840,city,Gaston,35.24432,-81.03851
+Dallas,3716180,town,Gaston,35.31521,-81.17832
+Lowell,3739480,city,Gaston,35.26799,-81.10179
+McAdenville,3739880,town,Gaston,35.25951,-81.07878
+Stanley,3764500,town,Gaston,35.35699,-81.09569
+Archdale,3701720,city,Randolph,35.90347,-79.96196
+Randleman,3755080,city,Randolph,35.81733,-79.80618
+Wake Forest,3770540,town,Wake,35.97752,-78.50691
+Hoffman,3731920,town,Richmond,35.03132,-79.5491
+Rockingham,3757260,city,Richmond,34.93911,-79.7621
+Eureka,3721960,town,Wayne,35.54142,-77.87628
+Pikeville,3751780,town,Wayne,35.49802,-77.98575
+Rhodhiss,3756240,town,Burke,35.76884,-81.43075
+Oakboro,3748040,town,Stanly,35.22608,-80.32454
+Red Cross,3755460,town,Stanly,35.2706,-80.3556
+Stanfield,3764460,town,Stanly,35.23375,-80.42844
+Henderson,3730660,city,Vance,36.32806,-78.42463
+Apex,3701520,town,Wake,35.72893,-78.8531
+Rolesville,3757640,town,Wake,35.92511,-78.46022
+Farmville,3722820,town,Pitt,35.59762,-77.59066
+China Grove,3712480,town,Rowan,35.57359,-80.57975
+Landis,3736860,town,Rowan,35.54787,-80.61163
+Greenville,3728080,city,Pitt,35.59527,-77.37916
+Spencer,3763760,town,Rowan,35.6945,-80.43222
+Winterville,3775060,town,Pitt,35.52711,-77.39748
+Granite Falls,3727420,town,Caldwell,35.79808,-81.43167
+Pinebluff,3751840,town,Moore,35.10888,-79.47141
+Pinehurst,3751940,village,Moore,35.19065,-79.46775
+Robbins,3757000,town,Moore,35.43202,-79.5856
+Taylortown,3766980,town,Moore,35.2148,-79.48858
+Pine Level,3752020,town,Johnston,35.50988,-78.24442
+Wilson's Mills,3774580,town,Johnston,35.58649,-78.36012
+Zebulon,3776220,town,Wake,35.82601,-78.31615
+North Wilkesboro,3747880,town,Wilkes,36.16972,-81.14064
+Wilkesboro,3774020,town,Wilkes,36.14169,-81.17286
+Biscoe,3706000,town,Montgomery,35.35787,-79.78063
+Siler City,3761860,town,Chatham,35.72381,-79.46116
+Glen Alpine,3726200,town,Burke,35.72831,-81.78274
+Hildebran,3731500,town,Burke,35.71814,-81.42105
+Kure Beach,3736220,town,New Hanover,34.00654,-77.90576
+Godwin,3726740,town,Cumberland,35.21715,-78.68069
+Coats,3713360,town,Harnett,35.40615,-78.6703
+Erwin,3721740,town,Harnett,35.32669,-78.67363
+Black Mountain,3706140,town,Buncombe,35.61486,-82.32282
+Clayton,3712860,town,Johnston,35.68995,-78.43023
+Kenly,3735540,town,Johnston,35.59435,-78.125
+Weaverville,3771560,town,Buncombe,35.69858,-82.56442
+New Hope,3746650,cdp,Wayne,35.37746,-77.88883
+Springdale,3764050,cdp,Gaston,35.29132,-81.14521
+Bowdens,3707340,cdp,Duplin,35.05792,-78.1128
+Cherry Branch,3712186,cdp,Craven,34.93091,-76.81204
+Gold Hill,3726800,cdp,Rowan,35.52243,-80.34336
+Graingers,3727300,cdp,Lenoir,35.31087,-77.51747
+Linville,3738420,cdp,Avery,36.06741,-81.87146
+Franklin,3724640,town,Macon,35.18068,-83.3806
+Bladenboro,3706240,town,Bladen,34.53785,-78.79546
+Tar Heel,3766740,town,Bladen,34.73193,-78.79076
+Catawba,3710980,town,Catawba,35.70692,-81.07396
+Claremont,3712720,city,Catawba,35.71281,-81.14924
+Hickory,3731060,city,Catawba,35.74261,-81.32624
+Gatesville,3725680,town,Gates,36.40692,-76.75455
+Hertford,3730900,town,Perquimans,36.17912,-76.47107
+Barker Ten Mile,3703665,cdp,Robeson,34.68254,-78.98893
+Raemon,3754600,cdp,Robeson,34.62391,-79.3484
+Shannon,3760940,cdp,Robeson,34.84792,-79.13967
+Delway,3716860,cdp,Sampson,34.81022,-78.21692
+Ingold,3733640,cdp,Sampson,34.83146,-78.34941
+Ivanhoe,3733940,cdp,Sampson,34.58695,-78.24465
+Vann Crossroads,3769755,cdp,Sampson,35.17123,-78.40166
+Buies Creek,3708760,cdp,Harnett,35.40719,-78.73935
+Fairplains,3722380,cdp,Wilkes,36.20236,-81.16281
+Moravian Falls,3744280,cdp,Wilkes,36.10726,-81.18074
+East Rockingham,3719800,cdp,Richmond,34.91344,-79.77098
+Welcome,3771760,cdp,Davidson,35.90178,-80.25006
+Holly Ridge,3732180,town,Onslow,34.49415,-77.55541
+St. Stephens,3758730,cdp,Catawba,35.77744,-81.28261
+Boone,3707080,town,Watauga,36.21127,-81.6719
+Columbus,3713980,town,Polk,35.249,-82.20105
+Tryon,3768580,town,Polk,35.20809,-82.23749
+Hemby Bridge,3730620,town,Union,35.09885,-80.62823
+Marvin,3741720,village,Union,34.95964,-80.79139
+Lake Santeetlah,3736514,town,Graham,35.36352,-83.86635
+Robbinsville,3757020,town,Graham,35.32302,-83.80687
+Andrews,3701380,town,Cherokee,35.19904,-83.827
+Bayshore,3704015,cdp,New Hanover,34.29312,-77.8091
+Murraysville,3745720,cdp,New Hanover,34.29192,-77.84286
+Webster,3771600,town,Jackson,35.34996,-83.21883
+Boonville,3707140,town,Yadkin,36.23386,-80.70928
+Yadkinville,3775960,town,Yadkin,36.13193,-80.65921
+Warrenton,3771100,town,Warren,36.39857,-78.1559
+Mills River,3743260,town,Henderson,35.38083,-82.58415
+Burgaw,3708960,town,Pender,34.54995,-77.92235
+Saluda,3758920,city,Polk,35.2371,-82.34705
+Hassell,3730040,town,Martin,35.90971,-77.27508
+Robersonville,3757100,town,Martin,35.82475,-77.2533
+Murfreesboro,3745640,town,Hertford,36.44017,-77.09857
+Matthews,3741960,town,Mecklenburg,35.11953,-80.71009
+Edenton,3720120,town,Chowan,36.06573,-76.60706
+Archer Lodge,3701760,town,Johnston,35.69143,-78.3751
+Roxboro,3758160,city,Person,36.38873,-78.98864
+Gaston,3725560,town,Northampton,36.49698,-77.64411
+Rich Square,3756440,town,Northampton,36.27394,-77.28391
+Woodland,3775340,town,Northampton,36.3323,-77.212
+River Bend,3756710,town,Craven,35.07168,-77.15032
+Vanceboro,3769680,town,Craven,35.30305,-77.1567
+Maysville,3742100,town,Jones,34.90421,-77.23095
+Trenton,3768320,town,Jones,35.0643,-77.35515
+Madison,3740560,town,Rockingham,36.38903,-79.9686
+Columbia,3713940,town,Tyrrell,35.92228,-76.24014
+Chadbourn,3711640,town,Columbus,34.3232,-78.82537
+Lake Waccamaw,3736640,town,Columbus,34.31945,-78.50598
+Ellenboro,3720780,town,Rutherford,35.32947,-81.76011
+Forest City,3724080,town,Rutherford,35.33351,-81.87153
+Lake Lure,3736500,town,Rutherford,35.43148,-82.20034
+Spindale,3763880,town,Rutherford,35.35956,-81.92308
+Boiling Spring Lakes,3706760,city,Brunswick,34.02786,-78.06537
+Carolina Shores,3710550,town,Brunswick,33.89881,-78.5829
+Oak Island,3748345,town,Brunswick,33.95483,-78.15859
+Ocean Isle Beach,3748700,town,Brunswick,33.88974,-78.4461
+Sandy Creek,3759090,town,Brunswick,34.28568,-78.15649
+Teachey,3767000,town,Duplin,34.76915,-78.00709
+Warsaw,3771160,town,Duplin,35.00067,-78.08986
+Scotland Neck,3759780,town,Halifax,36.13052,-77.42105
+Bailey,3703020,town,Nash,35.78052,-78.11288
+Newland,3746740,town,Avery,36.08741,-81.92693
+Middlesex,3742700,town,Nash,35.78831,-78.20302
+High Point,3731400,city,Guilford,35.97738,-80.00445
+Mebane,3742240,city,Alamance,36.08825,-79.27585
+Mint Hill,3743480,town,Mecklenburg,35.17906,-80.65399
+Weddington,3771680,town,Union,35.02378,-80.73897
+Oriental,3749380,town,Pamlico,35.03473,-76.68661
+Winfall,3774720,town,Perquimans,36.21043,-76.455
+Cherryville,3712340,city,Gaston,35.38116,-81.38038
+Williamston,3774220,town,Martin,35.85014,-77.05991
+Fairview,3722500,town,Union,35.15501,-80.53483
+Elk Park,3720700,town,Avery,36.15825,-81.9808
+Marion,3741420,city,McDowell,35.68445,-82.00426
+Marshall,3741580,town,Madison,35.79779,-82.68371
+Mars Hill,3741620,town,Madison,35.82742,-82.5496
+Davidson,3716400,town,Mecklenburg,35.49963,-80.84766
+Statesville,3764740,city,Iredell,35.7892,-80.87208
+Denton,3716980,town,Davidson,35.6333,-80.11276
+Elon,3721095,town,Alamance,36.0988,-79.50899
+Norwood,3747980,town,Stanly,35.22886,-80.11709
+Plymouth,3753040,town,Washington,35.86068,-76.74676
+Pantego,3750080,town,Beaufort,35.58751,-76.65974
+Ramseur,3755040,town,Randolph,35.73334,-79.65144
+Clinton,3713240,city,Sampson,35.00039,-78.33077
+Bath,3703840,town,Beaufort,35.47198,-76.81291
+Old Fort,3748920,town,McDowell,35.63042,-82.17767
+Pollocksville,3753200,town,Jones,35.00611,-77.22113
+Piney Green,3752260,cdp,Onslow,34.74799,-77.32113
+Faison,3722560,town,Duplin,35.11648,-78.13594
+Ahoskie,3700500,town,Hertford,36.28614,-76.98457
+Fletcher,3723760,town,Henderson,35.43332,-82.50174
+Cedar Point,3711340,town,Carteret,34.68445,-77.08347
+Alliance,3701000,town,Pamlico,35.14774,-76.81056
+Washington,3771220,city,Beaufort,35.55285,-77.04966
+Surf City,3766040,town,Pender,34.43167,-77.55105
+Ayden,3702840,town,Pitt,35.46948,-77.42117
+Wade,3770340,town,Cumberland,35.16317,-78.73698
+Richfield,3756340,town,Stanly,35.47129,-80.25867
+Bermuda Run,3705135,town,Davie,36.00165,-80.42854
+Canton,3710240,town,Haywood,35.53508,-82.83831
+Hobgood,3731860,town,Halifax,36.02694,-77.39395
+Pine Knoll Shores,3752000,town,Carteret,34.69862,-76.82047
+Cove Creek,3715040,cdp,Watauga,36.27501,-81.78406
+Foscoe,3724380,cdp,Watauga,36.15349,-81.77363
+Dana,3716220,cdp,Henderson,35.32392,-82.37221
+Fruitland,3725160,cdp,Henderson,35.39538,-82.40928
+Old Hundred,3748940,cdp,Scotland,34.82317,-79.58931
+Tyro,3769020,cdp,Davidson,35.7997,-80.37646
+Lake Royale,3736513,cdp,Franklin,35.96272,-78.19426
+Bunnlevel,3708880,cdp,Harnett,35.31005,-78.77247
+Wakulla,3770580,cdp,Robeson,34.79509,-79.25569
+Millingport,3743200,cdp,Stanly,35.37632,-80.31125
+Cordova,3714600,cdp,Richmond,34.91027,-79.81194
+Stony Point,3765260,cdp,Alexander,35.86658,-81.04948
+Riegelwood,3756600,cdp,Columbus,34.34367,-78.21877
+Potters Hill,3753580,cdp,Duplin,34.9645,-77.69831
+Cliffside,3713100,cdp,Rutherford,35.24801,-81.76529
+Southmont,3763360,cdp,Davidson,35.65297,-80.27026
+Pinnacle,3752500,cdp,Stokes,36.32356,-80.4259
+Bennett,3705020,cdp,Chatham,35.56474,-79.53918
+Rougemont,3758040,cdp,Durham,36.22099,-78.92064
+Avery Creek,3702760,cdp,Buncombe,35.4647,-82.5708
+Fairview,3722440,cdp,Buncombe,35.52249,-82.40129
+Royal Pines,3758260,cdp,Buncombe,35.4783,-82.50377
+Swannanoa,3766280,cdp,Buncombe,35.6031,-82.39104
+Salem,3758740,cdp,Burke,35.70031,-81.69392
+Salvo,3758940,cdp,Dare,35.55257,-75.468
+Buxton,3709400,cdp,Dare,35.25109,-75.54756
+Gloucester,3726680,cdp,Carteret,34.72924,-76.53905
+Jackson Heights,3734038,cdp,Lenoir,35.2239,-77.63345
+Hampstead,3729180,cdp,Pender,34.36465,-77.73053
+Blue Clay Farms,3706510,cdp,New Hanover,34.30046,-77.89402
+Mountain View,3744770,cdp,Catawba,35.67256,-81.37267
+Lowesville,3739520,cdp,Lincoln,35.41891,-80.99915
+Westport,3772755,cdp,Lincoln,35.51039,-80.97826
+West Marion,3772600,cdp,McDowell,35.64932,-82.02048
+East Flat Rock,3719420,cdp,Henderson,35.2801,-82.41432
+Etowah,3721880,cdp,Henderson,35.30609,-82.5902
+Cherokee,3712140,cdp,Swain,35.48123,-83.29629
+Hays,3730340,cdp,Wilkes,36.24693,-81.11415
+Frisco,3725020,cdp,Dare,35.24479,-75.59633
+Mar-Mac,3741540,cdp,Wayne,35.33422,-78.05423
+Toast,3767700,cdp,Surry,36.49527,-80.63842
+Lake Norman of Catawba,3736510,cdp,Catawba,35.59722,-80.98387
+Spout Springs,3764000,cdp,Harnett,35.27609,-79.03851
+Harmony,3729640,town,Iredell,35.95884,-80.77278
+Lake Norman of Iredell,3736511,cdp,Iredell,35.54484,-80.92402
+Wrightsboro,3775780,cdp,New Hanover,34.29483,-77.92797
+Northchase,3747485,cdp,New Hanover,34.30476,-77.87562
+Northlakes,3747695,cdp,Caldwell,35.77625,-81.3655
+Nebo,3746100,cdp,McDowell,35.70954,-81.91774
+White Oak,3773320,cdp,Bladen,34.73759,-78.70613
+Smithtown,3762580,cdp,Yadkin,36.23316,-80.57141
+Icard,3733320,cdp,Burke,35.72527,-81.45818
+Sneads Ferry,3762680,cdp,Onslow,34.55662,-77.38215
+Silver City,3761920,cdp,Hoke,34.9998,-79.23085
+Hobucken,3731880,cdp,Pamlico,35.25267,-76.57087
+Castle Hayne,3710880,cdp,New Hanover,34.36027,-77.91111
+Briar Chapel,3707748,cdp,Chatham,35.82414,-79.11684
+Governors Club,3727180,cdp,Chatham,35.84369,-79.04536
+Woodlawn,3775375,cdp,Alamance,36.11736,-79.29233
+Glenwood,3726560,cdp,McDowell,35.61612,-81.98327
+Grandy,3727400,cdp,Currituck,36.23413,-75.87894
+Long Creek,3739060,cdp,Pender,34.43878,-78.01607
+Deep Run,3716720,cdp,Lenoir,35.14112,-77.71641
+Atlantic,3702480,cdp,Carteret,34.88545,-76.33958
+Bowmore,3707400,cdp,Hoke,34.93539,-79.30034
+Brices Creek,3707765,cdp,Craven,35.05092,-77.08653
+Neuse Forest,3746280,cdp,Craven,34.9649,-76.94076
+Ocracoke,3748740,cdp,Hyde,35.10658,-75.9725
+Camden,3709780,cdp,Camden,36.32495,-76.17202
+Ogden,3748790,cdp,New Hanover,34.26567,-77.78977
+Hoopers Creek,3732580,cdp,Henderson,35.44789,-82.4315
+Avon,3702780,cdp,Dare,35.34825,-75.50701
+South Mills,3763340,cdp,Camden,36.43846,-76.33129
+West Canton,3772150,cdp,Haywood,35.53905,-82.86826
+Hightsville,3731490,cdp,New Hanover,34.26711,-77.93377
+James City,3734260,cdp,Craven,35.0704,-77.0266
+Half Moon,3728900,cdp,Onslow,34.83728,-77.46222
+Youngsville,3776200,town,Franklin,36.02441,-78.47825
+Blowing Rock,3706500,town,Watauga,36.12846,-81.67248
+Rural Hall,3758360,town,Forsyth,36.22536,-80.29858
+White Lake,3773300,town,Bladen,34.64175,-78.49689
+East Spencer,3719860,town,Rowan,35.68238,-80.42686
+Yanceyville,3776000,town,Caswell,36.40686,-79.34162
+Smithfield,3762520,town,Johnston,35.51205,-78.35135
+Grifton,3728200,town,Pitt,35.37362,-77.4377
+Broadway,3708080,town,Lee,35.45835,-79.05411
+Havelock,3730120,city,Craven,34.90422,-76.89524
+Greenevers,3727780,town,Duplin,34.8259,-77.93019
+Mount Pleasant,3745140,town,Cabarrus,35.39866,-80.43367
+Locust,3738860,city,Stanly,35.26135,-80.43292
+Jefferson,3734440,town,Ashe,36.42092,-81.46901
+Connelly Springs,3714280,town,Burke,35.75264,-81.49816
+Raeford,3754580,city,Hoke,34.97937,-79.22751
+Dobson,3717340,town,Surry,36.39491,-80.72156
+Kitty Hawk,3736060,town,Dare,36.07297,-75.71811
+Unionville,3769260,town,Union,35.07254,-80.51816
+Atlantic Beach,3702500,town,Carteret,34.70346,-76.73994
+Hookerton,3732540,town,Greene,35.423,-77.58948
+Seagrove,3760080,town,Randolph,35.53946,-79.77816
+Salisbury,3758860,city,Rowan,35.66446,-80.4799
+Pittsboro,3752660,town,Chatham,35.72241,-79.17465
+Selma,3760320,town,Johnston,35.53658,-78.28593
+Granite Quarry,3727440,town,Rowan,35.6131,-80.4497
+Forest Hills,3724170,village,Jackson,35.29571,-83.1954
+Bryson City,3708480,town,Swain,35.4262,-83.44738
+Como,3714060,town,Hertford,36.50106,-77.00731
+Biltmore Forest,3705880,town,Buncombe,35.5314,-82.53755
+Woodfin,3775280,town,Buncombe,35.64433,-82.58805
+Jamesville,3734320,town,Martin,35.81443,-76.9038
+Star,3764580,town,Montgomery,35.4004,-79.78295
+Pineville,3752220,town,Mecklenburg,35.08641,-80.89151
+Elrod,3721120,cdp,Robeson,34.60742,-79.22988
+Stedman,3764840,town,Cumberland,35.0096,-78.69589
+Sunset Beach,3765900,town,Brunswick,33.88596,-78.50701
+Enfield,3721360,town,Halifax,36.17937,-77.66897
+Dortches,3717520,town,Nash,36.013,-77.85839
+Burlington,3709060,city,Alamance,36.08564,-79.46007
+Hot Springs,3732840,town,Madison,35.89361,-82.83107
+Ranlo,3755260,town,Gaston,35.28854,-81.12999
+Wendell,3771860,town,Wake,35.77183,-78.42743
+Stem,3764940,town,Granville,36.20058,-78.72231
+Black Creek,3706080,town,Wilson,35.63585,-77.93262
+Clemmons,3712960,village,Forsyth,36.02743,-80.38258
+Trinity,3768400,city,Randolph,35.88216,-80.0109
+Mesic,3742480,town,Pamlico,35.20207,-76.64821
+Salemburg,3758840,town,Sampson,35.01535,-78.50347
+Arapahoe,3701640,town,Pamlico,35.02156,-76.82599
+Lawndale,3737260,town,Cleveland,35.41416,-81.56307
+Banner Elk,3703500,town,Avery,36.16218,-81.86797
+Brevard,3707720,city,Transylvania,35.23423,-82.73074
+Brunswick,3708420,town,Columbus,34.28797,-78.70249
+Sandyfield,3759135,town,Columbus,34.37111,-78.30627
+Walnut Cove,3770780,town,Stokes,36.298,-80.14056
+Milton,3743300,town,Caswell,36.53781,-79.20816
+Rutherfordton,3758460,town,Rutherford,35.36912,-81.95606
+Cajah's Mountain,3709530,town,Caldwell,35.85196,-81.53797
+Harrells,3729680,town,Sampson,34.72783,-78.2015
+Stonewall,3765120,town,Pamlico,35.13444,-76.74059
+Pilot Mountain,3751820,town,Surry,36.38738,-80.47225
+Calabash,3709540,town,Brunswick,33.89941,-78.54278
+Northwest,3747860,city,Brunswick,34.31686,-78.14716
+Southport,3763400,city,Brunswick,33.92622,-78.01898
+Bessemer City,3705220,city,Gaston,35.28555,-81.28077
+Lattimore,3737040,town,Cleveland,35.31687,-81.66046
+Anderson Creek,3701340,cdp,Harnett,35.26405,-78.95791
+Vandemere,3769720,town,Pamlico,35.18661,-76.66938
+Swansboro,3766360,town,Onslow,34.69394,-77.1376
+Seven Lakes,3760515,cdp,Moore,35.27123,-79.57969
+Bonnetsville,3706980,cdp,Sampson,35.00022,-78.39433
+Millers Creek,3743160,cdp,Wilkes,36.19194,-81.23636
+Hayesville,3730280,town,Clay,35.04361,-83.81577
+Rose Hill,3757860,town,Duplin,34.82565,-78.02737
+Snow Hill,3762760,town,Greene,35.45193,-77.684
+Laurel Hill,3737120,cdp,Scotland,34.81017,-79.54597
+Creedmoor,3715320,city,Granville,36.12098,-78.68385
+East Arcadia,3719300,town,Bladen,34.38099,-78.32371
+Butters,3709380,cdp,Bladen,34.56017,-78.84931
+Carrboro,3710620,town,Orange,35.91793,-79.08424
+Hamilton,3729120,town,Martin,35.94513,-77.20662
+Lumberton,3739700,city,Robeson,34.62951,-79.00796
+Bethlehem,3705530,cdp,Alexander,35.8162,-81.29621
+Lake Park,3736512,village,Union,35.08767,-80.63675
+Maxton,3742020,town,Robeson,34.73788,-79.35158
+Wingate,3774760,town,Union,34.98474,-80.44945
+Navassa,3746060,town,Brunswick,34.27684,-78.02529
+Cape Colony,3710264,cdp,Chowan,36.02109,-76.58142
+Sugar Mountain,3765530,village,Avery,36.12633,-81.8646
+East Laurinburg,3719620,town,Scotland,34.76895,-79.44514
+Rutherford College,3758440,town,Burke,35.7557,-81.52841
+Governors Village,3727182,cdp,Chatham,35.85126,-79.0257
+Bridgeton,3707860,town,Craven,35.12935,-77.01479
+Flat Rock,3723600,village,Henderson,35.26867,-82.45088
+Spruce Pine,3764260,town,Mitchell,35.91512,-82.07046
+Boardman,3706660,town,Columbus,34.43582,-78.94612
+Thomasville,3767420,city,Davidson,35.88109,-80.08071
+Cleveland,3713000,town,Rowan,35.73293,-80.68103
+Bunn,3708860,town,Franklin,35.95913,-78.25191
+Mount Gilead,3744900,town,Montgomery,35.21496,-80.00294
+Glenville,3726520,cdp,Jackson,35.17079,-83.12514
+Edneyville,3720280,cdp,Henderson,35.40187,-82.3386
+Light Oak,3738170,cdp,Cleveland,35.28616,-81.47733
+Love Valley,3739420,town,Iredell,35.99013,-80.98806
+Glen Raven,3726460,cdp,Alamance,36.12328,-79.46639
+Lumber Bridge,3739680,town,Robeson,34.88984,-79.07246
+Barker Heights,3703640,cdp,Henderson,35.31004,-82.4415
+Valley Hill,3769640,cdp,Henderson,35.29531,-82.48403
+Wallace,3770720,town,Duplin,34.73643,-77.99339
+Altamahaw,3701140,cdp,Alamance,36.18889,-79.50529
+Roseboro,3757800,town,Sampson,34.95401,-78.51307
+Skippers Corner,3762190,cdp,New Hanover,34.32988,-77.914
+Gastonia,3725580,city,Gaston,35.26316,-81.19626
+Oxford,3749800,city,Granville,36.31116,-78.58783
+South Henderson,3763240,cdp,Vance,36.30293,-78.40284
+Horse Shoe,3732740,cdp,Henderson,35.34525,-82.55795
+Monroe,3743920,city,Union,35.02172,-80.5836
+Chinquapin,3712520,cdp,Duplin,34.83198,-77.8215
+Franklinton,3724720,town,Franklin,36.10282,-78.45317
+Cameron,3709800,town,Moore,35.32597,-79.2542
+Milwaukee,3743320,cdp,Northampton,36.4055,-77.23035
+Forest Oaks,3724198,cdp,Guilford,35.99117,-79.70708
+Mount Olive,3745100,town,Wayne,35.19724,-78.06717
+Barbecue,3703530,cdp,Harnett,35.31914,-79.04368
+Minnesott Beach,3743440,town,Pamlico,34.98054,-76.82137
+Bostic,3707220,town,Rutherford,35.36244,-81.83601
+Littleton,3738680,town,Halifax,36.4343,-77.91094
+Long View,3739280,town,Catawba,35.72513,-81.38456
+Cape Carteret,3710260,town,Carteret,34.70335,-77.0569
+Grandfather Village,3727324,village,Avery,36.09875,-81.84824
+Wadesboro,3770380,town,Anson,34.96454,-80.07456
+Shallotte,3760800,town,Brunswick,33.97665,-78.38852
+Weldon,3771780,town,Halifax,36.42313,-77.61308
+Red Oak,3755640,town,Nash,36.03938,-77.89999
+Moyock,3745460,cdp,Currituck,36.50273,-76.17277
+Hollister,3732100,cdp,Halifax,36.25479,-77.93223
+Maury,3742000,cdp,Greene,35.47921,-77.59014
+Rocky Point,3757540,cdp,Pender,34.44389,-77.89074
+Evergreen,3722080,cdp,Columbus,34.41478,-78.91145
+Gerton,3725900,cdp,Henderson,35.47594,-82.35045
+Ruffin,3758340,cdp,Rockingham,36.4427,-79.54323
+Waves,3771440,cdp,Dare,35.56961,-75.46546
+Belwood,3704960,town,Cleveland,35.4794,-81.52274
+Richlands,3756360,town,Onslow,34.90024,-77.54371
+Fayetteville,3722920,city,Cumberland,35.11221,-79.03705
+Lilesville,3738200,town,Anson,34.96752,-79.98455
+Wrightsville Beach,3775820,town,New Hanover,34.21327,-77.79792
+Red Springs,3755660,town,Robeson,34.81588,-79.18297
+Keener,3735340,cdp,Sampson,35.11278,-78.30975
+Princeville,3753840,town,Edgecombe,35.88862,-77.52626
+Walstonburg,3770860,town,Greene,35.59431,-77.69828
+Franklinville,3724740,town,Randolph,35.74544,-79.69039
+Hamlet,3729160,city,Richmond,34.88874,-79.70605
+Jonesville,3734840,town,Yadkin,36.23367,-80.83611
+Benson,3705040,town,Johnston,35.38202,-78.54679
+Roper,3757740,town,Washington,35.87861,-76.61717
+Dunn,3718320,city,Harnett,35.31193,-78.61419
+Louisburg,3739360,town,Franklin,36.09808,-78.30079
+Mulberry,3745560,cdp,Wilkes,36.22766,-81.16568
+Falkland,3722640,town,Pitt,35.6985,-77.51258
+St. James,3758630,town,Brunswick,33.94771,-78.11238
+Chocowinity,3712580,town,Beaufort,35.51601,-77.1023
+Sims,3762060,town,Wilson,35.75997,-78.06008
+Cornelius,3714700,town,Mecklenburg,35.47352,-80.88619
+Cashiers,3710800,cdp,Jackson,35.1066,-83.09715
+Barnardsville,3703720,cdp,Buncombe,35.78121,-82.45556
+Wilson,3774540,city,Wilson,35.72884,-77.92889
+Swan Quarter,3766340,cdp,Hyde,35.41094,-76.32394
+Flat Rock,3723640,cdp,Surry,36.50659,-80.5799
+Kelford,3735360,town,Bertie,36.18127,-77.22431
+Ruth,3758420,town,Rutherford,35.38235,-81.94483
+Fair Bluff,3722240,town,Columbus,34.31379,-79.02841
+Kingstown,3735890,town,Cleveland,35.36217,-81.61995
+Enochville,3721500,cdp,Rowan,35.51992,-80.66803
+McLeansville,3740460,cdp,Guilford,36.11145,-79.65149
+Sunbury,3765700,cdp,Gates,36.44585,-76.61251
+Mineral Springs,3743360,town,Union,34.93981,-80.68548
+Seven Devils,3760505,town,Watauga,36.14542,-81.8203
+Whispering Pines,3773140,village,Moore,35.25357,-79.37513
+Goldsboro,3726880,city,Wayne,35.37435,-77.98187
+Five Points,3723520,cdp,Hoke,35.01592,-79.35191
+Hallsboro,3729000,cdp,Columbus,34.31938,-78.5958
+Valle Crucis,3769600,cdp,Watauga,36.2127,-81.79525
+Bell Arthur,3704680,cdp,Pitt,35.59148,-77.51337
+Wilmington,3774440,city,New Hanover,34.21037,-77.88693
+Trent Woods,3768340,town,Craven,35.08079,-77.08763

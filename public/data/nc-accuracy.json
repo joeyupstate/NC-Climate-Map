@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "generated": "2026-10-23T13:57:00.978Z"
+  },
+  "years": "2016–2025",
+  "ncStations": 174,
+  "singleYear": {
+    "meanBias": 0.41,
+    "meanAbsError": 1.26,
+    "within2F": 87,
+    "within5F": 97
+  },
+  "tenYearAverage": {
+    "meanBias": 0.41,
+    "meanAbsError": 0.92,
+    "sameHalfZone": 84
+  },
+  "byElevationAboveCell": {
+    "below -300 ft": {
+      "stations": 15,
+      "gridMinusObs": -0.38
+    },
+    "-300 to 300 ft": {
+      "stations": 331,
+      "gridMinusObs": 0.38
+    },
+    "300 to 700 ft": {
+      "stations": 7,
+      "gridMinusObs": -0.74
+    },
+    "700+ ft": {
+      "stations": 7,
+      "gridMinusObs": 3
+    }
+  },
+  "largestNcErrors": [
+    {
+      "station": "MT. MITCHELL",
+      "elev": 6240,
+      "gridMinusObs": 5.5
+    },
+    {
+      "station": "SMITHFIELD",
+      "elev": 150,
+      "gridMinusObs": 4.2
+    },
+    {
+      "station": "GRANDFATHER MTN",
+      "elev": 5280,
+      "gridMinusObs": 4.2
+    },
+    {
+      "station": "B. EVERETT JORDAN DAM",
+      "elev": 310,
+      "gridMinusObs": -3.9
+    },
+    {
+      "station": "TUSQUITEE NORTH CAROLINA",
+      "elev": 2293,
+      "gridMinusObs": -3.8
+    }
+  ],
+  "towns": {
+    "maxFtAboveCell": 283,
+    "summitLike": []
+  }
+}
