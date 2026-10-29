@@ -150,6 +150,7 @@ export function createInfoPanel(el) {
         <span class="intro__art"><img src="${import.meta.env.BASE_URL}palm-illustration.png" alt="" /></span>
         <h2 class="intro__title">Pick a spot on the map</h2>
         <p>Click any town or place in North Carolina to see its hardiness zone, its coldest nights, and which palms will grow there.</p>
+        <button type="button" class="intro__about" data-about aria-haspopup="dialog">How does this work?</button>
         <ul class="intro__key">
           ${CATEGORIES.map(({ key, label, hint }) => `<li class="intro__key-item intro__key-item--${key}">${ICONS[key]}<span><b>${label}</b> ${hint.toLowerCase()}</span></li>`).join('')}
         </ul>

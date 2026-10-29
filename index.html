@@ -25,6 +25,10 @@
             <h1 class="brand__title">NC Climate Map</h1>
             <p class="brand__tagline">Hardiness zones &amp; palms from 20 winters of real temperature data</p>
           </div>
+          <button type="button" class="brand__info" data-about aria-haspopup="dialog">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 11v5" /><path d="M12 7.5v.01" /></svg>
+            <span>How it works</span>
+          </button>
         </header>
 
         <fieldset class="window" disabled>
@@ -44,6 +48,85 @@
       </aside>
       <div class="map" id="map" role="application" aria-label="Map of North Carolina"></div>
     </div>
+
+    <dialog class="about" id="about" aria-labelledby="about-title">
+      <div class="about__inner">
+        <header class="about__head">
+          <img class="about__art" src="/palm-illustration.png" alt="" />
+          <div>
+            <p class="about__eyebrow">About this map</p>
+            <h2 class="about__title" id="about-title">How it works</h2>
+          </div>
+          <button type="button" class="about__close" data-about-close aria-label="Close">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </button>
+        </header>
+
+        <div class="about__body">
+          <section>
+            <h3>What it's for</h3>
+            <p>
+              Find the plant hardiness zone for any spot in North Carolina based on <b>recent winters</b>, not
+              decades-old averages, and see which palms you can grow there.
+            </p>
+          </section>
+
+          <section>
+            <h3>How to use it</h3>
+            <ol class="about__steps">
+              <li><b>Pick a time window</b>: the past 20, 15, 10, 8, 5 or 2 years, or just last winter. The whole map recolors.</li>
+              <li><b>Tap a town or any spot</b> on the map. Rural areas work too.</li>
+              <li><b>Read the results</b>: the zone, the coldest night on record for that window, and two tabs: <b>Palms</b> (what will grow) and <b>Climate</b> (the coldest night of every winter).</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>How the zones are calculated</h3>
+            <p>
+              For every spot, we find the <b>coldest night of each winter</b> (July to June), then average those
+              lows over the window you pick. That average sets the zone, using the same 5°F half-zones and the
+              same colors as the USDA Plant Hardiness Zone Map.
+            </p>
+            <p>
+              The official USDA map averages 30 years (1991–2020). Shorter windows here show how recent winters
+              compare. A run of mild winters, or one brutal freeze, changes the picture.
+            </p>
+          </section>
+
+          <section>
+            <h3>Palm categories</h3>
+            <ul class="about__key">
+              <li class="about__key-item about__key-item--bulletproof"><b>Bulletproof</b> Grows without protection. Even a bad winter for the zone won't kill it.</li>
+              <li class="about__key-item about__key-item--marginal"><b>Marginal</b> Usually fine, but a bad winter may kill it if it's unprotected.</li>
+              <li class="about__key-item about__key-item--protect"><b>Needs protection</b> Wrap, cover or heat it most winters.</li>
+            </ul>
+            <p>Categories come from each palm's cold tolerance, adjusted by grower experience.</p>
+          </section>
+
+          <section>
+            <h3>Where the data comes from</h3>
+            <ul class="about__sources">
+              <li><b>Temperatures:</b> <a href="https://prism.oregonstate.edu" target="_blank" rel="noopener">PRISM</a> (Oregon State University) daily low temperatures on an 800 m grid, the same source behind the USDA map.</li>
+              <li><b>Towns &amp; counties:</b> US Census Bureau boundaries.</li>
+              <li><b>Elevations:</b> USGS 3D Elevation Program.</li>
+            </ul>
+            <p>
+              Checked against <b>182 NC weather stations</b>, our 20-winter averages are within about 1°F of what
+              thermometers recorded.
+            </p>
+          </section>
+
+          <section>
+            <h3>Keep in mind</h3>
+            <p>
+              Zones are a guide, not a guarantee. Your own yard can be warmer or colder: frost pockets, south-facing
+              walls, city heat and water all matter. So do how long a freeze lasts, wet cold, and a plant's size and
+              age. If a spot sits near a zone line, plan for the colder zone.
+            </p>
+          </section>
+        </div>
+      </div>
+    </dialog>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

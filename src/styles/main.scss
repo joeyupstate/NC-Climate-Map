@@ -117,11 +117,18 @@ h3 {
   }
 }
 
+// Desktop: emblem + title, with the "How it works" button on a row below the
+// title. Phones: one slim row with the button at the end.
 .brand {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 0.75rem;
+  column-gap: 0.75rem;
   padding: 1.25rem 1.25rem 1rem;
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: auto 1fr auto;
+  }
   background:
     radial-gradient(120% 140% at 0% 0%, rgba(127, 168, 101, 0.22), transparent 60%),
     $forest;
@@ -157,6 +164,45 @@ h3 {
     margin: 0.2rem 0 0;
     font-size: 0.8125rem;
     color: rgba(244, 239, 226, 0.75);
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    grid-column: 2;
+    justify-self: start;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.7rem 0.4rem 0.5rem;
+    border: 1px solid rgba(255, 250, 240, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 250, 240, 0.12);
+    font: inherit;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #fffaf0;
+    cursor: pointer;
+    transition: background 0.15s;
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    &:hover {
+      background: rgba(255, 250, 240, 0.22);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #f0c27b;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: $bp-mobile) {
+      grid-column: 3;
+      grid-row: 1;
+      margin-top: 0;
+    }
   }
 
   // Phones: a slim title bar, so the map and results get the space.
@@ -373,6 +419,25 @@ h3 {
     margin: 0 auto;
     max-width: 30ch;
     color: $muted;
+  }
+
+  &__about {
+    margin-top: 0.75rem;
+    padding: 0.3rem 0.2rem;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $forest;
+    text-decoration: underline;
+    text-decoration-color: rgba(31, 77, 54, 0.35);
+    text-underline-offset: 3px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration-color: currentColor;
+    }
   }
 
   &__key {
@@ -919,5 +984,210 @@ h3 {
 
   .leaflet-bottom {
     bottom: 136px;
+  }
+}
+
+// ---------------------------------------------------------------- about dialog
+
+.about {
+  width: min(640px, calc(100vw - 2rem));
+  max-height: min(86vh, 860px);
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  background: $panel;
+  box-shadow: 0 24px 60px rgba(20, 30, 24, 0.35);
+  color: $ink;
+
+  &::backdrop {
+    background: rgba(20, 30, 24, 0.55);
+    backdrop-filter: blur(2px);
+  }
+
+  // Phones: a full-height sheet from the bottom.
+  @media (max-width: $bp-mobile) {
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 92dvh;
+    margin: auto 0 0;
+    border-radius: 18px 18px 0 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-height: inherit;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.1rem 1.25rem;
+    background:
+      radial-gradient(120% 140% at 0% 0%, rgba(127, 168, 101, 0.22), transparent 60%),
+      $forest;
+    color: #fffaf0;
+  }
+
+  &__art {
+    width: 3.25rem;
+    height: 3.25rem;
+    flex-shrink: 0;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background: $paper;
+    object-fit: contain;
+  }
+
+  &__eyebrow {
+    margin: 0;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(244, 239, 226, 0.75);
+  }
+
+  &__title {
+    margin: 0.1rem 0 0;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    color: #fffaf0;
+  }
+
+  &__close {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: auto;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 250, 240, 0.14);
+    color: #fffaf0;
+    cursor: pointer;
+
+    svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    &:hover {
+      background: rgba(255, 250, 240, 0.26);
+    }
+
+    &:focus-visible {
+      outline: 2px solid #f0c27b;
+      outline-offset: 2px;
+    }
+  }
+
+  &__body {
+    overflow-y: auto;
+    padding: 0.5rem 1.5rem 1.75rem;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+
+    section {
+      padding: 1rem 0;
+      border-bottom: 1px solid $line;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.125rem;
+      color: $forest;
+    }
+
+    p {
+      margin: 0 0 0.6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $forest;
+      font-weight: 600;
+    }
+  }
+
+  &__steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+
+    li {
+      position: relative;
+      padding: 0.3rem 0 0.3rem 2.25rem;
+      counter-increment: step;
+
+      &::before {
+        content: counter(step);
+        position: absolute;
+        left: 0;
+        top: 0.3rem;
+        display: grid;
+        place-items: center;
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        background: $forest;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: #fffaf0;
+      }
+    }
+  }
+
+  &__key {
+    margin: 0 0 0.6rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__key-item {
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    background: var(--tint);
+
+    b {
+      display: block;
+      color: var(--accent);
+    }
+
+    &--bulletproof {
+      --accent: #{$moss};
+      --tint: #eef5e8;
+    }
+
+    &--marginal {
+      --accent: #{$amber};
+      --tint: #fbf3df;
+    }
+
+    &--protect {
+      --accent: #{$terracotta};
+      --tint: #fbece4;
+    }
+  }
+
+  &__sources {
+    margin: 0 0 0.6rem;
+    padding-left: 1.1rem;
+
+    li {
+      margin-bottom: 0.3rem;
+    }
   }
 }

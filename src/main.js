@@ -4,6 +4,7 @@ import './styles/main.scss';
 import L from 'leaflet';
 import { createMap, fitNC, setPanLimits } from './map.js';
 import { createSheet, MOBILE } from './sheet.js';
+import { initAbout } from './about.js';
 import { loadLayers } from './layers.js';
 import { createInfoPanel } from './info-panel.js';
 import { addLegend } from './legend.js';
@@ -12,6 +13,7 @@ import { createZoneGrid } from './zone-grid.js';
 import { DEFAULT_WINDOW, createClimate, windowLabel, zoneRange } from './zones.js';
 
 async function init() {
+  initAbout();
   const map = createMap('map');
   const panel = createInfoPanel(document.getElementById('info-body'));
   const topBar = document.getElementById('panel-top');
