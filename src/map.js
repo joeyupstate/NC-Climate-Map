@@ -1,7 +1,7 @@
 import L from 'leaflet';
 
-// Rough NC extent, padded so the coast and mountains aren't clipped.
-const NC_BOUNDS = L.latLngBounds([33.7, -84.4], [36.7, -75.3]);
+// NC's extent (state outline bounds, rounded out slightly).
+const NC_BOUNDS = L.latLngBounds([33.8, -84.35], [36.6, -75.42]);
 
 export function createMap(elementId) {
   const map = L.map(elementId, {
@@ -38,6 +38,10 @@ export function setPanLimits(map, mobile) {
 
 // Frame the whole state, leaving room for anything covering the map edges
 // (on phones: the top bar and the bottom sheet), in pixels.
+// The zoom isn't snapped, so the state fills the width of a phone exactly.
 export function fitNC(map, { top = 0, bottom = 0 } = {}) {
-  map.fitBounds(NC_BOUNDS, { paddingTopLeft: [8, top + 8], paddingBottomRight: [8, bottom + 8] });
+  const snap = map.options.zoomSnap;
+  map.options.zoomSnap = 0;
+  map.fitBounds(NC_BOUNDS, { paddingTopLeft: [6, top + 8], paddingBottomRight: [6, bottom + 8], animate: false });
+  map.options.zoomSnap = snap;
 }

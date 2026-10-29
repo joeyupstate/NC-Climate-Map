@@ -5,7 +5,8 @@ import { findNearestPlace } from './nearest.js';
 const CAN_HOVER = window.matchMedia('(hover: hover)').matches;
 
 const STYLES = {
-  state: { color: '#1f4d36', weight: 2, fill: false, interactive: false },
+  state: { color: '#1f4d36', weight: 2, fill: false, interactive: false, pane: 'outside' },
+  outside: { stroke: false, fillColor: '#f6f1e6', fillOpacity: 0.7, interactive: false, pane: 'outside' },
   county: { color: '#3d4a40', weight: 0.6, opacity: 0.35, fillColor: '#ffffff', fillOpacity: 0 },
   // Towns are faint outlines over the statewide zone grid; fill stays clickable at 0 opacity.
   place: { color: '#2f3b33', weight: 0.6, opacity: 0.4, fillColor: '#ffffff', fillOpacity: 0 },
@@ -65,6 +66,16 @@ export async function loadLayers(map, { getZone, onPlaceSelect, onCountySelect }
       });
     },
   }).addTo(map);
+
+  // Fade everything outside NC: a world-sized polygon with the state cut out.
+  // Its own pane sits above the basemap labels, so labels outside NC fade too.
+  map.createPane('outside').style.zIndex = 550;
+  map.getPane('outside').style.pointerEvents = 'none';
+  const world = [[-89, -179], [-89, 179], [89, 179], [89, -179]];
+  const holes = state.features.flatMap(({ geometry }) =>
+    geometry.coordinates.map((poly) => poly[0].map(([lon, lat]) => [lat, lon])),
+  );
+  L.polygon([world, ...holes], STYLES.outside).addTo(map);
 
   L.geoJSON(state, { style: STYLES.state }).addTo(map);
 
