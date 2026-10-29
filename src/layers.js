@@ -2,6 +2,8 @@ import L from 'leaflet';
 import { fetchJson } from './data.js';
 import { findNearestPlace } from './nearest.js';
 
+const CAN_HOVER = window.matchMedia('(hover: hover)').matches;
+
 const STYLES = {
   state: { color: '#1f4d36', weight: 2, fill: false, interactive: false },
   county: { color: '#3d4a40', weight: 0.6, opacity: 0.35, fillColor: '#ffffff', fillOpacity: 0 },
@@ -43,10 +45,13 @@ export async function loadLayers(map, { getZone, onPlaceSelect, onCountySelect }
     style: STYLES.place,
     onEachFeature: (feature, layer) => {
       const { name } = feature.properties;
-      layer.bindTooltip(() => {
-        const zone = getZone(feature.properties);
-        return zone ? `${name} · Zone ${zone}` : name;
-      }, { sticky: true, direction: 'top' });
+      // Hover tooltips only where there's a mouse; on touch they open on tap and stick.
+      if (CAN_HOVER) {
+        layer.bindTooltip(() => {
+          const zone = getZone(feature.properties);
+          return zone ? `${name} · Zone ${zone}` : name;
+        }, { sticky: true, direction: 'top' });
+      }
       layer.on({
         mouseover: () => layer !== selected && layer.setStyle(STYLES.placeHover),
         mouseout: () => layer !== selected && placesLayer.resetStyle(layer),

@@ -1,7 +1,9 @@
 import 'leaflet/dist/leaflet.css';
 import './styles/main.scss';
 
-import { createMap } from './map.js';
+import L from 'leaflet';
+import { createMap, fitNC, setPanLimits } from './map.js';
+import { createSheet, MOBILE } from './sheet.js';
 import { loadLayers } from './layers.js';
 import { createInfoPanel } from './info-panel.js';
 import { addLegend } from './legend.js';
@@ -12,6 +14,29 @@ import { DEFAULT_WINDOW, createClimate, windowLabel, zoneRange } from './zones.j
 async function init() {
   const map = createMap('map');
   const panel = createInfoPanel(document.getElementById('info-body'));
+  const topBar = document.getElementById('panel-top');
+  const sheet = createSheet(document.getElementById('sheet'), document.getElementById('sheet-handle'), topBar);
+
+  // Phones: the map is full-screen under the top bar and the sheet, so frame
+  // NC in the space between them.
+  const frame = () => {
+    setPanLimits(map, MOBILE.matches);
+    if (MOBILE.matches) fitNC(map, { top: topBar.offsetHeight, bottom: sheet.peekHeight() });
+    else fitNC(map);
+  };
+  frame();
+  document.fonts?.ready.then(frame); // the top bar's height settles once fonts load
+  MOBILE.addEventListener('change', frame);
+
+  // Phones: open the sheet and pan so the tapped spot stays visible above it.
+  const reveal = (latlng) => {
+    if (!MOBILE.matches) return;
+    sheet.open('half');
+    const top = topBar.offsetHeight;
+    const bottom = window.innerHeight - sheet.targetHeight();
+    const { y } = map.latLngToContainerPoint(latlng);
+    if (y < top + 24 || y > bottom - 24) map.panBy([0, y - (top + bottom) / 2]);
+  };
   const windowSet = document.querySelector('.window');
   const chips = document.getElementById('zone-window');
   const spanText = document.getElementById('window-span');
@@ -73,17 +98,23 @@ async function init() {
       onPlaceSelect: (place) => {
         selection = { place };
         showSelection();
+        reveal(L.latLng(place.lat, place.lon));
       },
       onCountySelect: (county, nearest, latlng) => {
         selection = { county, nearest, latlng };
         showSelection();
+        reveal(latlng);
       },
     });
 
     grid = createZoneGrid(map, gridData, layers.state);
     grid.render(years);
 
-    addLegend(map, grid.zonesInUse(climate.windows).sort((a, b) => zoneRange(a)[0] - zoneRange(b)[0]));
+    const legend = addLegend(map, grid.zonesInUse(climate.windows).sort((a, b) => zoneRange(a)[0] - zoneRange(b)[0]));
+    // Phones: legend sits just above the sheet; desktop: top-right.
+    const placeLegend = () => legend.setPosition(MOBILE.matches ? 'bottomleft' : 'topright');
+    placeLegend();
+    MOBILE.addEventListener('change', placeLegend);
 
     chips.addEventListener('change', (e) => {
       years = Number(e.target.value);

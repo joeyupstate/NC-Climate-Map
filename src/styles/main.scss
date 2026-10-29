@@ -52,16 +52,18 @@ h3 {
   display: flex;
   height: 100vh;
   height: 100dvh;
-
-  @media (max-width: $bp-mobile) {
-    flex-direction: column-reverse;
-  }
 }
 
 .map {
   flex: 1;
   min-height: 0;
   background: #e9e4d8;
+
+  // Phones: full-screen map; the top bar and bottom sheet float over it.
+  @media (max-width: $bp-mobile) {
+    position: fixed;
+    inset: 0;
+  }
 }
 
 // ---------------------------------------------------------------- panel
@@ -77,16 +79,33 @@ h3 {
   box-shadow: 4px 0 24px rgba(31, 42, 34, 0.06);
   z-index: 1; // shadow over the map
 
+  // Phones: the panel's two parts (top bar, sheet) are positioned on their own.
   @media (max-width: $bp-mobile) {
-    width: 100%;
-    max-height: 48%;
-    border-right: 0;
-    border-top: 1px solid $line;
-    box-shadow: 0 -4px 24px rgba(31, 42, 34, 0.08);
+    display: contents;
+  }
+
+  &__top {
+    @media (max-width: $bp-mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1100; // above Leaflet panes and controls
+      background: $panel;
+      box-shadow: 0 2px 14px rgba(31, 42, 34, 0.14);
+    }
   }
 
   &__body {
     padding: 0 1.25rem 2rem;
+
+    @media (max-width: $bp-mobile) {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+    }
   }
 
   &__error {
@@ -159,6 +178,54 @@ h3 {
   }
 }
 
+// ---------------------------------------------------------------- bottom sheet (phones)
+
+.sheet {
+  @media (max-width: $bp-mobile) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    height: 136px; // JS sets the live height
+    background: $panel;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -6px 28px rgba(31, 42, 34, 0.18);
+    transition: height 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    &.is-dragging {
+      transition: none;
+    }
+  }
+
+  &__handle {
+    display: none;
+
+    @media (max-width: $bp-mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 100%;
+      height: 28px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: grab;
+      touch-action: none; // the handle drags the sheet, not the page
+    }
+  }
+
+  &__grip {
+    width: 40px;
+    height: 5px;
+    border-radius: 999px;
+    background: #cdc3ad;
+  }
+}
+
 // ---------------------------------------------------------------- window chips
 
 .window {
@@ -186,8 +253,16 @@ h3 {
     color: $muted;
   }
 
+  // Phones: just the chips, in one row that scrolls sideways. The window's
+  // winters also show on the zone card, so the label and span can go.
   @media (max-width: $bp-mobile) {
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 0;
+
+    &__label,
+    &__span {
+      display: none;
+    }
   }
 }
 
@@ -196,6 +271,17 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
+
+  @media (max-width: $bp-mobile) {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 1rem;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .chip {
@@ -208,10 +294,15 @@ h3 {
     pointer-events: none;
   }
 
+  @media (max-width: $bp-mobile) {
+    flex-shrink: 0;
+  }
+
   span {
     display: block;
     min-width: 2.75rem;
     padding: 0.4rem 0.7rem;
+    white-space: nowrap;
     border: 1px solid $line;
     border-radius: 999px;
     background: $card;
@@ -249,17 +340,33 @@ h3 {
   padding: 1.75rem 0.25rem 0;
   text-align: center;
 
+  // Phones: the sheet's peek height fits the title and first lines, so the
+  // illustration moves below the text (it's already in the top bar).
+  @media (max-width: $bp-mobile) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.25rem;
+  }
+
   &__art img {
     display: block;
     width: 10rem;
     height: 10rem;
     margin: 0 auto;
     object-fit: contain;
+
+    @media (max-width: $bp-mobile) {
+      display: none;
+    }
   }
 
   &__title {
     margin: 1rem 0 0.4rem;
     font-size: 1.375rem;
+
+    @media (max-width: $bp-mobile) {
+      margin-top: 0;
+    }
   }
 
   p {
@@ -796,4 +903,21 @@ h3 {
 .leaflet-control-attribution {
   background: rgba(251, 248, 241, 0.85) !important;
   color: $muted;
+
+  @media (max-width: $bp-mobile) {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+}
+
+// Phones: pinch to zoom instead of buttons, and keep the bottom controls
+// (legend, attribution) just above the sheet's peek height.
+@media (max-width: $bp-mobile) {
+  .leaflet-control-zoom {
+    display: none;
+  }
+
+  .leaflet-bottom {
+    bottom: 136px;
+  }
 }

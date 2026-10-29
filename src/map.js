@@ -12,7 +12,7 @@ export function createMap(elementId) {
     zoomSnap: 0.25,
   });
 
-  map.fitBounds(NC_BOUNDS);
+  fitNC(map);
 
   // Esri light gray canvas: neutral, keyless basemap so data layers stand out.
   const esri = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas';
@@ -27,4 +27,17 @@ export function createMap(elementId) {
   }).addTo(map);
 
   return map;
+}
+
+// How far the map can be dragged. Phones get no limit: a tall screen at low
+// zoom is taller than any sensible bounds (Leaflet then snaps the map back),
+// and the coast must be liftable above a half-open bottom sheet.
+export function setPanLimits(map, mobile) {
+  map.setMaxBounds(mobile ? null : NC_BOUNDS.pad(0.25));
+}
+
+// Frame the whole state, leaving room for anything covering the map edges
+// (on phones: the top bar and the bottom sheet), in pixels.
+export function fitNC(map, { top = 0, bottom = 0 } = {}) {
+  map.fitBounds(NC_BOUNDS, { paddingTopLeft: [8, top + 8], paddingBottomRight: [8, bottom + 8] });
 }

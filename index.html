@@ -15,7 +15,8 @@
   </head>
   <body>
     <div class="app">
-      <aside class="panel" id="info-panel" aria-live="polite">
+      <aside class="panel" id="info-panel">
+        <div class="panel__top" id="panel-top">
         <header class="brand">
           <span class="brand__mark" aria-hidden="true">
             <img src="/palm-illustration.png" alt="" />
@@ -31,8 +32,15 @@
           <div class="chips" id="zone-window"></div>
           <p class="window__span" id="window-span">Loading data…</p>
         </fieldset>
+        </div>
 
-        <div class="panel__body" id="info-body"></div>
+        <!-- Desktop: the rest of the sidebar. Phones: a bottom sheet over the map. -->
+        <section class="sheet" id="sheet" data-state="peek">
+          <button type="button" class="sheet__handle" id="sheet-handle" aria-label="Show more details" aria-expanded="false">
+            <span class="sheet__grip" aria-hidden="true"></span>
+          </button>
+          <div class="panel__body" id="info-body" aria-live="polite"></div>
+        </section>
       </aside>
       <div class="map" id="map" role="application" aria-label="Map of North Carolina"></div>
     </div>
